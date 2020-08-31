@@ -1,0 +1,111 @@
+C51 COMPILER V9.56.0.0   HT1621B                                                           08/31/2020 19:31:41 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE HT1621B
+OBJECT MODULE PLACED IN .\output\ht1621b.obj
+COMPILER INVOKED BY: C:\program_list\keil\C51\BIN\C51.EXE ..\HAEDWARE\HT1621B\ht1621b.c LARGE OPTIMIZE(8,SPEED) BROWSE I
+                    -NCDIR(..\source;..\HAEDWARE\Flash;..\HAEDWARE\DELAY;..\HAEDWARE\HT1621B;..\HAEDWARE\Uart;..\HAEDWARE\Key;..\HAEDWARE\Tim
+                    -er;..\HAEDWARE\Pwm;..\HAEDWARE\ADC;..\HAEDWARE\WDT;..\HAEDWARE\PID) DEBUG OBJECTEXTEND PRINT(.\Listings\ht1621b.lst) TAB
+                    -S(2) OBJECT(.\output\ht1621b.obj)
+
+line level    source
+
+   1          #include "ht1621b.h"
+   2          #include "delay.h"
+   3          #include "intrins.h"//nop
+   4          
+   5          
+   6          void ht1621_init_pin(void)
+   7          {
+   8   1        P1M1 = 0XC1;//设置为推挽输出
+   9   1        P1M0 = 0XC1;//设置为推挽输出
+  10   1        P0M7 = 0XC1;//设置为推挽输出
+  11   1        P0M6 = 0XC1;//设置为推挽输出
+  12   1      
+  13   1        LCD_CS = 1;
+  14   1        LCD_RD = 1;
+  15   1        LCD_WR = 1;
+  16   1        LCD_DATA = 1;
+  17   1      }
+  18          
+  19          //高位在前
+  20          void ht1621_sendbit_hight(u8 dat,u8 cnt)
+  21          {
+  22   1        u8 i = 0;
+  23   1      
+  24   1        for (i = 0; i < cnt; ++i)
+  25   1        {
+  26   2          LCD_WR = 0;
+  27   2          if((dat & 0x80) == 0)
+  28   2            LCD_DATA = 0;
+  29   2          else 
+  30   2            LCD_DATA = 1;
+  31   2          LCD_WR = 1;
+  32   2          lcd_delay_us(5);
+  33   2          dat <<= 1;
+  34   2        }
+  35   1      }
+  36          //低位在前
+  37          void ht1621_sendbit_low(u8 dat,u8 cnt)
+  38          {
+  39   1        u8 i = 0;
+  40   1      
+  41   1        for (i = 0; i < cnt; ++i)
+  42   1        {
+  43   2          LCD_WR = 0;
+  44   2          if((dat & 0x01) == 0)
+  45   2            LCD_DATA = 0;
+  46   2          else  
+  47   2            LCD_DATA = 1;
+  48   2          LCD_WR = 1;
+  49   2          lcd_delay_us(5);
+  50   2          dat >>= 1;  
+  51   2        }
+  52   1      }
+C51 COMPILER V9.56.0.0   HT1621B                                                           08/31/2020 19:31:41 PAGE 2   
+
+  53          
+  54          
+  55          void ht1621_send_cmd(u8 command)
+  56          {
+  57   1        LCD_CS = 0;
+  58   1        ht1621_sendbit_hight(0x80,4);  //写入标志位100  写命令  没有更改时钟输出所以command最高位置0
+  59   1        ht1621_sendbit_hight(command,8);
+  60   1        LCD_CS = 1;
+  61   1      }
+  62          
+  63          void ht1621_write_byte(u8 addr, u8 dat)
+  64          {
+  65   1        LCD_CS = 0;
+  66   1        ht1621_sendbit_hight(0xA0,3);//101   写数据标志位
+  67   1        ht1621_sendbit_hight(addr << 2,6);//ram  高6位  SEG序号
+  68   1        ht1621_sendbit_low(dat,4);//data 低4位  COM
+  69   1        LCD_CS = 1;
+  70   1      }
+  71          
+  72          void release_ht1621b_pin(void)
+  73          {
+  74   1        LCD_CS = 1;
+  75   1        LCD_RD = 1;
+  76   1        LCD_WR = 1;
+  77   1        LCD_DATA = 1;
+  78   1      }
+  79          
+  80          
+  81          
+  82          
+  83          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    233    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----       9
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

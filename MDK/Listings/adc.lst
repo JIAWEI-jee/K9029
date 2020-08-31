@@ -1,0 +1,134 @@
+C51 COMPILER V9.56.0.0   ADC                                                               08/31/2020 19:31:42 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE ADC
+OBJECT MODULE PLACED IN .\output\adc.obj
+COMPILER INVOKED BY: C:\program_list\keil\C51\BIN\C51.EXE ..\HAEDWARE\ADC\adc.c LARGE OPTIMIZE(8,SPEED) BROWSE INCDIR(..
+                    -\source;..\HAEDWARE\Flash;..\HAEDWARE\DELAY;..\HAEDWARE\HT1621B;..\HAEDWARE\Uart;..\HAEDWARE\Key;..\HAEDWARE\Timer;..\HA
+                    -EDWARE\Pwm;..\HAEDWARE\ADC;..\HAEDWARE\WDT;..\HAEDWARE\PID) DEBUG OBJECTEXTEND PRINT(.\Listings\adc.lst) TABS(2) OBJECT(
+                    -.\output\adc.obj)
+
+line level    source
+
+   1          #include "adc.h"
+   2          #include "delay.h"
+   3          #include "uart.h"
+   4          
+   5          void adc_init(void)
+   6          {
+   7   1          P0M1 = 0x01;    //P01ÉèÖÃÎªÄ£ÄâÊäÈë
+   8   1          P0M3 = 0x01;        //P03ÉèÖÃÎªÄ£ÄâÊäÈë
+   9   1        ADCC0 = 0x80;   //´ò¿ªADC×ª»»µçÔ´     00 VDD
+  10   1      //                      01 ÄÚ²¿4V
+  11   1      //                      10 ÄÚ²¿3V
+  12   1      //                      11 ÄÚ²¿2V
+  13   1      //1¡¢ ÄÚ²¿²Î¿¼µçÑ¹Ñ¡ÔñÎª 2V Ê±£¬ VDD µçÑ¹Ðë¸ßÓÚ 2.7V£»
+  14   1      //    ÄÚ²¿²Î¿¼µçÑ¹Ñ¡ÔñÎª 3V Ê±£¬ VDD µçÑ¹Ðë¸ßÓÚ 3.5V£» 
+  15   1      //    ÄÚ²¿²Î¿¼µçÑ¹Ñ¡ÔñÎª 4V Ê±£¬ VDD µçÑ¹Ðë¸ßÓÚ4.5V¡£
+  16   1      //2¡¢ ÏµÍ³½øÈëµôµçÄ£Ê½Ç°£¬½¨Òé½« ADC ²Î¿¼µçÑ¹Ñ¡Ôñ·Ç VDD£¬¿ÉÒÔ½øÒ»²½½µµÍÏµÍ³¹¦ºÄ¡£
+  17   1        delay_us(20);           //ÑÓÊ±20us£¬È·±£ADCÏµÍ³ÎÈ¶¨
+  18   1      
+  19   1      //  ADCC1 = 0x01;           //Ñ¡ÔñADCÍ¨µÀ1
+  20   1        ADCC2 = 0x49;           //×ª»»½á¹û12Î»Êý¾Ý£¬Êý¾ÝÓÒ¶ÔÆë£¬ADCÊ±ÖÓ4·ÖÆµ 4M/4 = 1MHz
+  21   1      }
+  22          
+  23          u16 get_adc_val(void)
+  24          {
+  25   1        u16 adc_val = 0;
+  26   1        ADCC1 = 0x01;
+  27   1        
+  28   1        ADCC0 |= 0x40;          //Æô¶¯ADC×ª»»
+  29   1        while(!(ADCC0&0x20));     //µÈ´ýADC×ª»»½áÊø
+  30   1        ADCC0 &=~ 0x20;         //Çå³ý±êÖ¾Î»
+  31   1        adc_val = ADCR;         //»ñÈ¡ADCµÄÖµ
+  32   1            
+  33   1      
+  34   1          // ADC_printf("P01_ADC = %d \r\n",adc_val);
+  35   1        return adc_val;
+  36   1      }
+  37          
+  38          u16 get_adc_val_ch(void)
+  39          {
+  40   1        u16 adc_val_ch = 0;
+  41   1        ADCC1 = 0x03;                     //Ñ¡ÔñADCÍ¨µÀ7
+  42   1        
+  43   1        ADCC0 |= 0x40;          //Æô¶¯ADC×ª»»
+  44   1        while(!(ADCC0&0x20));     //µÈ´ýADC×ª»»½áÊø
+  45   1        ADCC0 &=~ 0x20;         //Çå³ý±êÖ¾Î»
+  46   1        adc_val_ch = ADCR;          //»ñÈ¡ADCµÄÖµ
+  47   1      
+  48   1      //    ADC_printf("P23_ADC = %d \r\n",adc_val_ch);
+  49   1        return adc_val_ch;
+  50   1      }
+  51          
+  52          
+C51 COMPILER V9.56.0.0   ADC                                                               08/31/2020 19:31:42 PAGE 2   
+
+  53          
+  54          void get_voltage(u16 *u1_voltage,u16 *u3_voltage)
+  55          {
+  56   1        u32 temp = 0;
+  57   1        u8  i = 0;
+  58   1        for(i=0;i<5;i++)
+  59   1          {
+  60   2            temp+=get_adc_val();
+  61   2          }
+  62   1         temp/=5;
+  63   1        *u1_voltage = temp*5000/4096;
+  64   1        temp = 0;
+  65   1        for (i=0;i<5;i++)
+  66   1          {
+  67   2           temp+=get_adc_val_ch();
+  68   2          }
+  69   1        temp/=5;
+  70   1        *u3_voltage = temp*5000/4096;
+  71   1      }
+  72          
+  73          //u16 get_voltage_u1(void)
+  74          //{
+  75          //    u32 tep = 0;
+  76          //  u8 i = 0;
+  77          //
+  78          //  for(i = 0;i < 5;i++)
+  79          //  {
+  80          //    tep += get_adc_val();
+  81          //  }
+  82          //    tep /= 5;
+  83          //    tep = tep*4000/4096;  //¡¤0‡30…7¨®1000¡À0…9 ¡À0„50…70Š30ˆ40„30‡80‹50…80Š00†2¨®0‡60‹50
+             -ˆ20†3 4096
+  84          //    return tep;
+  85          //}
+  86          //
+  87          //u16 get_voltage_u3(void)
+  88          //{
+  89          //    u32 tep = 0;
+  90          //  u8 i = 0;
+  91          //
+  92          //  for(i = 0;i < 5;i++)
+  93          //  {
+  94          //    tep += get_adc_val_ch();
+  95          //  }
+  96          //    tep /= 5;
+  97          //    tep = tep*4000/4096;  //¡¤0‡30…7¨®1000¡À0…9 ¡À0„50…70Š30ˆ40„30‡80‹50…80Š00†2¨®0‡60‹50
+             -ˆ20†3 4096
+  98          //    return tep;
+  99          //}
+ 100          
+ 101          
+ 102          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    371    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----      11
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+C51 COMPILER V9.56.0.0   ADC                                                               08/31/2020 19:31:42 PAGE 3   
+
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,269 @@
+C51 COMPILER V9.56.0.0   LCD_DISPLAY                                                       08/31/2020 19:31:41 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE LCD_DISPLAY
+OBJECT MODULE PLACED IN .\output\lcd_display.obj
+COMPILER INVOKED BY: C:\program_list\keil\C51\BIN\C51.EXE ..\HAEDWARE\HT1621B\lcd_display.c LARGE OPTIMIZE(8,SPEED) BROW
+                    -SE INCDIR(..\source;..\HAEDWARE\Flash;..\HAEDWARE\DELAY;..\HAEDWARE\HT1621B;..\HAEDWARE\Uart;..\HAEDWARE\Key;..\HAEDWARE
+                    -\Timer;..\HAEDWARE\Pwm;..\HAEDWARE\ADC;..\HAEDWARE\WDT;..\HAEDWARE\PID) DEBUG OBJECTEXTEND PRINT(.\Listings\lcd_display.
+                    -lst) TABS(2) OBJECT(.\output\lcd_display.obj)
+
+line level    source
+
+   1          #include "lcd_display.h"
+   2          #include "ht1621b.h"
+   3          #include "delay.h"
+   4          #include "key.h"
+   5          #include "uart.h"
+   6          
+   7          #define COM1 0X01
+   8          #define COM2 0X02
+   9          #define COM3 0X04
+  10          #define COM4 0X08
+  11          #define COM_OFF 0x00
+  12          
+  13          u8 Blink_std = 0;
+  14          u8 cali_display_std = 0;
+  15          void lcd_ht1621b_on ( void )
+  16          {
+  17   1        ht1621_send_cmd ( LCD_ON );
+  18   1      }
+  19          
+  20          void lcd_ht1621b_off ( void )
+  21          {
+  22   1        ht1621_send_cmd ( LCD_OFF );
+  23   1      }
+  24          
+  25          void ht1621_all_display ( void )
+  26          {
+  27   1        u8 i = 0;
+  28   1      
+  29   1        for ( i = 0; i < 32; ++i ) //max seg 31
+  30   1        {
+  31   2          ht1621_write_byte ( i,0x0F ); //置1为点亮 com全开
+  32   2        }
+  33   1        // release_ht1621b_pin();
+  34   1      }
+  35          
+  36          void ht1621_all_clear ( void )
+  37          {
+  38   1        u8 i = 0;
+  39   1      
+  40   1        for ( i = 0; i < 32; ++i ) //max seg 31
+  41   1        {
+  42   2          ht1621_write_byte ( i,0x00 ); //置1为点亮 com全关
+  43   2        }
+  44   1         //release_ht1621b_pin();
+  45   1      }
+  46          
+  47          void init_lcd_ht1621b ( void )
+  48          {
+  49   1        ht1621_init_pin();
+  50   1        
+  51   1        ht1621_send_cmd ( BIAS );
+  52   1        ht1621_send_cmd ( RC256 ); //RC256  XTAL_32K
+C51 COMPILER V9.56.0.0   LCD_DISPLAY                                                       08/31/2020 19:31:41 PAGE 2   
+
+  53   1        ht1621_send_cmd ( WDTDIS );
+  54   1        ht1621_send_cmd ( TMDIS );
+  55   1        ht1621_send_cmd ( SYSEN );
+  56   1        ht1621_send_cmd ( LCD_ON );
+  57   1        ht1621_all_clear();
+  58   1        ht1621_all_display();
+  59   1      }
+  60          
+  61          void lcd_turn_off_time ( void )
+  62          {
+  63   1        ht1621_write_byte ( 28,COM_OFF );
+  64   1        ht1621_write_byte ( 31,COM_OFF );
+  65   1      }
+  66          
+  67          //void lcd_display_time(u8 time_type)
+  68          //{
+  69          //  ht1621_write_byte(31,COM_OFF);  //old LCD
+  70          //  ht1621_write_byte(28,COM_OFF);
+  71          //  switch(time_type)
+  72          //  {
+  73          //    case TIMER_ON:    ht1621_write_byte(28,COM4);break;//选择com 选择SEG引脚  28为SEG28 COM4 0X08 显示ON
+  74          //    case TIMER_0_5H:  ht1621_write_byte(31,COM2);break;
+  75          //    case TIMER_1H:    ht1621_write_byte(31,COM3);break;
+  76          //    case TIMER_2H:    ht1621_write_byte(31,COM4);break;
+  77          //    case TIMER_4H:    ht1621_write_byte(28,COM2);break;
+  78          //    case TIMER_8H:    ht1621_write_byte(28,COM3);break;
+  79          //  }
+  80          //}
+  81          
+  82          
+  83          //void lcd_display_time ( u8 time_type )
+  84          //{
+  85          //  ht1621_write_byte ( 31,COM_OFF );
+  86          //  ht1621_write_byte ( 28,COM_OFF );
+  87          //  switch ( time_type )
+  88          //  {
+  89          //    case TIMER_ON:
+  90          //      ht1621_write_byte ( 28,COM4 );
+  91          //      break;//选择com 选择SEG引脚  28为SEG28 COM4 0X08 显示ON
+  92          //    case TIMER_0_5H:
+  93          //      ht1621_write_byte ( 31,COM2 );
+  94          //      break;//0.5
+  95          //    case TIMER_1H:
+  96          //      ht1621_write_byte ( 28,COM2 );
+  97          //      break;//1h
+  98          //    case TIMER_2H:
+  99          //      ht1621_write_byte ( 31,COM3 );
+ 100          //      break;//2h
+ 101          //    case TIMER_4H:
+ 102          //      ht1621_write_byte ( 28,COM3 );
+ 103          //      break;//4h
+ 104          //    case TIMER_8H:
+ 105          //      ht1621_write_byte ( 31,COM4 );
+ 106          //      break;//8h
+ 107          //  }
+ 108          //}
+ 109          
+ 110          void lcd_display_time ( u8 time_type )
+ 111          {
+ 112   1        ht1621_send_cmd ( LCD_ON );
+ 113   1        ht1621_write_byte ( 31,COM_OFF );
+ 114   1        ht1621_write_byte ( 28,COM_OFF );
+C51 COMPILER V9.56.0.0   LCD_DISPLAY                                                       08/31/2020 19:31:41 PAGE 3   
+
+ 115   1        switch ( time_type )
+ 116   1        {
+ 117   2          case TIMER_ON:
+ 118   2            ht1621_write_byte ( 27,COM2|COM4 );
+ 119   2            ht1621_write_byte ( 28,COM2|COM4|COM3 ); //ON
+ 120   2              ht1621_write_byte ( 31,COM2|COM4 );
+ 121   2            break;
+ 122   2          case TIMER_0_5H:
+ 123   2            ht1621_write_byte ( 27,COM2|COM4|COM1); //0.5H
+ 124   2            ht1621_write_byte ( 28,COM2|COM4 );
+ 125   2              ht1621_write_byte ( 31,COM2|COM4 );
+ 126   2            break;
+ 127   2          case TIMER_1H:
+ 128   2            ht1621_write_byte ( 27,COM2|COM4|COM3 ); //1H
+ 129   2            ht1621_write_byte ( 28,COM2|COM4 );
+ 130   2              ht1621_write_byte ( 31,COM2|COM4 );
+ 131   2            break;
+ 132   2          case TIMER_2H:
+ 133   2            ht1621_write_byte ( 27,COM2|COM4 );
+ 134   2            ht1621_write_byte ( 28,COM2|COM4 );
+ 135   2              ht1621_write_byte ( 31,COM2|COM4|COM1 );//2H
+ 136   2            break;
+ 137   2          case TIMER_4H:
+ 138   2            ht1621_write_byte ( 27,COM2|COM4 );
+ 139   2            ht1621_write_byte ( 28,COM2|COM4|COM1 );//4h
+ 140   2              ht1621_write_byte ( 31,COM2|COM4 );
+ 141   2            break;
+ 142   2          case TIMER_8H:
+ 143   2            ht1621_write_byte ( 27,COM2|COM4 );
+ 144   2            ht1621_write_byte ( 28,COM2|COM4 );
+ 145   2              ht1621_write_byte ( 31,COM2|COM4|COM3 );//8H
+ 146   2            break;
+ 147   2        }
+ 148   1      }
+ 149          
+ 150          void lcd_display_gap ( u8 gap )
+ 151          {
+ 152   1        ht1621_send_cmd ( LCD_ON );
+ 153   1        ht1621_write_byte ( 29,0x00 );
+ 154   1        ht1621_write_byte ( 30,0x00 );
+ 155   1        if (cali_display_std == 1)
+ 156   1        { 
+ 157   2        if (Blink_std == 0) 
+ 158   2        {
+ 159   3          ht1621_write_byte ( 29,COM2|COM3 );
+ 160   3          ht1621_write_byte ( 30,COM2|COM3|COM4 );
+ 161   3          Blink_std = 1;
+ 162   3        }
+ 163   2        else 
+ 164   2        {
+ 165   3            Blink_std = 0;
+ 166   3            ht1621_write_byte ( 28,COM_OFF );
+ 167   3            ht1621_write_byte ( 31,COM_OFF );
+ 168   3        }
+ 169   2       }
+ 170   1        else if ( gap == 1 )
+ 171   1        {
+ 172   2          ht1621_write_byte ( 29,COM2|COM3 );
+ 173   2        }
+ 174   1        else if ( gap == 2 )
+ 175   1        {
+ 176   2          ht1621_write_byte ( 29,COM1|COM2|COM4 );
+C51 COMPILER V9.56.0.0   LCD_DISPLAY                                                       08/31/2020 19:31:41 PAGE 4   
+
+ 177   2          ht1621_write_byte ( 30,COM3|COM4 );
+ 178   2        }
+ 179   1        else if ( gap == 3 )
+ 180   1        {
+ 181   2          ht1621_write_byte ( 29,COM1|COM2|COM3|COM4 );
+ 182   2          ht1621_write_byte ( 30,COM3 );
+ 183   2        }
+ 184   1        else if ( gap == 4 )
+ 185   1        {
+ 186   2          ht1621_write_byte ( 29,COM2|COM3 );
+ 187   2          ht1621_write_byte ( 30,COM2|COM3 );
+ 188   2        }
+ 189   1        else if ( gap == 5 )
+ 190   1        {
+ 191   2          ht1621_write_byte ( 29,COM1|COM3|COM4 );
+ 192   2          ht1621_write_byte ( 30,COM2|COM3 );
+ 193   2        }
+ 194   1        else if ( gap == 6 )
+ 195   1        {
+ 196   2          ht1621_write_byte ( 29,COM1|COM3|COM4 );
+ 197   2          ht1621_write_byte ( 30,COM2|COM3|COM4 );
+ 198   2        }
+ 199   1        else if ( gap == 7 )
+ 200   1        {
+ 201   2          ht1621_write_byte ( 29,COM1|COM2|COM3 );
+ 202   2        }
+ 203   1        else if ( gap == 8 )
+ 204   1        {
+ 205   2          ht1621_write_byte ( 29,COM1|COM2|COM3|COM4 );
+ 206   2          ht1621_write_byte ( 30,COM2|COM3|COM4 );
+ 207   2        }
+ 208   1        else if ( gap == 9 )
+ 209   1        {
+ 210   2          ht1621_write_byte ( 29,COM1|COM2|COM3|COM4 );
+ 211   2          ht1621_write_byte ( 30,COM2|COM3 );
+ 212   2        }
+ 213   1        else if ( gap == Error_STD )
+ 214   1        {
+ 215   2          if ( Blink_std == 0 )
+ 216   2          {
+ 217   3            ht1621_write_byte ( 29,COM1 );
+ 218   3            ht1621_write_byte ( 30,COM2|COM3|COM4 );
+ 219   3            Blink_std = 1;
+ 220   3          }
+ 221   2          else
+ 222   2          {
+ 223   3            Blink_std = 0;
+ 224   3            ht1621_write_byte ( 28,COM_OFF );
+ 225   3            ht1621_write_byte ( 31,COM_OFF );
+ 226   3          }
+ 227   2        }
+ 228   1        
+ 229   1      }
+ 230          
+ 231          //
+ 232          //void flick(void)
+ 233          //{
+ 234          //
+ 235          //}
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+C51 COMPILER V9.56.0.0   LCD_DISPLAY                                                       08/31/2020 19:31:41 PAGE 5   
+
+   CODE SIZE        =    514    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =      2       4
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

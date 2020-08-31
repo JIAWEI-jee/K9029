@@ -1,0 +1,16 @@
+"STARTUP.obj",
+".\main.obj",
+".\flash.obj",
+".\delay.obj",
+".\ht1621b.obj",
+".\lcd_display.obj",
+".\uart.obj",
+".\key.obj",
+".\timer.obj",
+".\pwm.obj",
+".\adc.obj",
+".\wdt.obj" 
+TO "project" 
+PRINT(".\Listings\project.m51") RAMSIZE(256) 
+CODE( 0X0000-0X3FFF )
+XDATA( 0X0000-0X01FF )
