@@ -2,6 +2,7 @@
 #define __TIMER_H__
 #include "HC89F303.h"
 
+#define pwm_count        100
 #define overrang_time   (60*60*2)
 #define Heat_Value      (60*4)
 #define Length          8
@@ -28,6 +29,6 @@ void time0_init(void);
 void set_time_sec_val(u16 sec);
 void set_time_sec(void);
 void set_correct_time(u8 gap);
-
+void Controll_Heat ( u16 temp_set,u16 temp_now );
 #endif
 

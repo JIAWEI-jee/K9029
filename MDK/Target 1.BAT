@@ -17,5 +17,5 @@ SET CPU_XTAL=0x01E84800
 "C:\program_list\keil\C51\BIN\C51.EXE" @".\output\adc.__i"
 "C:\program_list\keil\C51\BIN\C51.EXE" @".\output\wdt.__i"
 "C:\program_list\keil\C51\BIN\C51.EXE" @".\output\PID.__i"
-"C:\program_list\keil\C51\BIN\BL51.EXE" @".\output\K9018.lnp"
-"C:\program_list\keil\C51\BIN\OH51.EXE" ".\output\K9018" 
+"C:\program_list\keil\C51\BIN\BL51.EXE" @".\output\K9029.lnp"
+"C:\program_list\keil\C51\BIN\OH51.EXE" ".\output\K9029" 

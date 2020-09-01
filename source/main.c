@@ -10,6 +10,7 @@
 #include "lcd_display.h"
 #include "adc.h"
 #include "wdt.h"
+#include "PID.h"
 
 #define SKU 9029
 #define SOFT_VER "1.00.00"
@@ -17,8 +18,7 @@
 u16 adc_cnt = 0;
 u8  first_heat_std = 0,fault_std = 0;
 
-void Set_Temp ( u16 temp );
-void Controll_Heat ( u16 temp_set,u16 temp_now );
+void Set_Temp ( u8 gap );
 void Protect ( void );
 void Error ( void );
 
@@ -45,7 +45,6 @@ static void key_handle ( void )
 	}
 	if ( ( key_val == KEY_1_PRES ) && ( calibration_std == 0 ) )
 	{
-		KEY_printf ( " key_scan\r\n" );
 
 		if ( get_device_state() == ON )
 		{
@@ -61,6 +60,7 @@ static void key_handle ( void )
 
 			first_heat_std = 1;
 			set_correct_time ( flash_info.gap );
+			Set_Temp ( flash_info.gap );
 			lcd_display_gap ( flash_info.gap );
 			lcd_display_time ( flash_info.timer );
 
@@ -74,7 +74,7 @@ static void key_handle ( void )
 		if ( key_val == KEY_2_PRES ) //档位
 		{
 
-			KEY_printf ( " KEY_2_PRES\r\n" );
+
 			if ( flash_info.gap < GAP_9 )
 			{
 				flash_info.gap++;
@@ -98,6 +98,7 @@ static void key_handle ( void )
 
 			first_heat_std = 1;
 			set_correct_time ( flash_info.gap );
+			Set_Temp ( flash_info.gap );
 			lcd_display_gap ( flash_info.gap );
 			//set_time_sec();
 			flah_save_data();
@@ -187,7 +188,7 @@ u16 temp_calc ( u16 uR510,u16 uRw )
 	{
 		return 0xff;
 	}
-	gm_printf ( "R = %f  \r\n",u1 );
+	//gm_printf ( "R = %f  \r\n",u1 );
 	u1 = u1 / Length;
 	if ( u1 < 73 )
 	{
@@ -227,8 +228,6 @@ u16 temp_calc ( u16 uR510,u16 uRw )
 		}
 		// gm_printf("i = %d \r\n",i);
 		basi_tmp = basi_tmp - i;
-
-		//gm_printf("basi_unnder20 = %d \r\n",basi_tmp);
 	}
 	//gm_printf("basi_tmpF:%d \r\n",basi_tmp);
 
@@ -251,9 +250,9 @@ void temperature_handle ( void )
 
 		//	KEY_printf ( "adv1 = %d adv3 =%d \r\n",adc_val1,adc_val3 );  //pjw set
 		temp = temp_calc ( adc_val1, adc_val3 );
-		KEY_printf ( "temp val:%d \r\n",temp );
+		//KEY_printf ( "temp val:%d \r\n",temp );
 		temp =	calibration_temperature ( temp );
-		KEY_printf ( "cali_temp val:%d \r\n",temp );
+		KEY_printf ( "%d \r\n",temp );
 
 		if ( adc_val1 >50 )
 		{
@@ -275,9 +274,18 @@ void temperature_handle ( void )
 					}
 				}
 
+				if ( one_heat == 0 )
+				{
+					spid.iCurVal = temp*10;
+					PID_Operation ();
+				}
+				else if ( one_heat == 1 )
+				{
+					Controll_Heat ( One_Heat_Temp, temp );
+				}
 				lcd_display_time ( flash_info.timer );
 				lcd_display_gap ( flash_info.gap );
-				Set_Temp ( temp );
+				
 			}
 			else
 			{
@@ -343,73 +351,49 @@ void main ( void )
 		key_handle();
 		temperature_handle();
 		// Protect();
-		//uart_handle();
+
 		clear_wdt();
 
 	}
 }
 
 
-void Controll_Heat ( u16 temp_set,u16 temp_now )
+
+void Set_Temp ( u8 gap )
 {
-//KEY_printf ( "temp_set val:%d \r\n",temp_set );
-	if ( temp_now >  temp_set   )
-	{
-		//	KEY_printf ( "close_heat \r\n");
 
-		set_pwm ( 0 ); // 关闭加热丝
-	}
-	else if ( temp_now < ( temp_set - Open_Heat_Value ) )
+	switch ( gap )
 	{
-		//KEY_printf ( "open_heat \r\n");
-		set_pwm ( 10 ); //打开加热丝
-	}
-}
-
-void Set_Temp ( u16 temp )
-{
-	if ( one_heat == 1 )
-	{
-		//KEY_printf ( "oneheat \r\n");
-		Controll_Heat ( One_Heat_Temp,temp );
-	}
-	else
-	{
-		//	KEY_printf ( "twoheat \r\n");
-		switch ( flash_info.gap )
-		{
-			case GAP_WARM:
-				Controll_Heat ( GAP_WARM_temp,temp );
-				break;
-			case GAP_1:
-				Controll_Heat ( GAP_1_temp,temp );
-				break;
-			case GAP_2:
-				Controll_Heat ( GAP_2_temp,temp );
-				break;
-			case GAP_3:
-				Controll_Heat ( GAP_3_temp,temp );
-				break;
-			case GAP_4:
-				Controll_Heat ( GAP_4_temp,temp );
-				break;
-			case GAP_5:
-				Controll_Heat ( GAP_5_temp,temp );
-				break;
-			case GAP_6:
-				Controll_Heat ( GAP_6_temp,temp );
-				break;
-			case GAP_7:
-				Controll_Heat ( GAP_7_temp,temp );
-				break;
-			case GAP_8:
-				Controll_Heat ( GAP_8_temp,temp );
-				break;
-			case GAP_9:
-				Controll_Heat ( GAP_9_temp,temp );
-				break;
-
-		}
+		case GAP_WARM:
+			spid.iSetVal = GAP_WARM_temp*10;
+			break;
+		case GAP_1:
+			spid.iSetVal = GAP_1_temp*10;
+			break;
+		case GAP_2:
+			spid.iSetVal = GAP_2_temp*10;
+			break;
+		case GAP_3:
+			spid.iSetVal = GAP_3_temp*10;
+			break;
+		case GAP_4:
+			spid.iSetVal = GAP_4_temp*10;
+			break;
+		case GAP_5:
+			spid.iSetVal = GAP_5_temp*10;
+			break;
+		case GAP_6:
+			spid.iSetVal = GAP_6_temp*10;
+			break;
+		case GAP_7:
+			spid.iSetVal = GAP_7_temp*10;
+			break;
+		case GAP_8:
+			spid.iSetVal = GAP_8_temp*10;
+			break;
+		case GAP_9:
+			spid.iSetVal = GAP_9_temp*10;
+			break;
 	}
 }
 

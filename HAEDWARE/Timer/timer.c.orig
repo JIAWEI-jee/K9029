@@ -2,6 +2,8 @@
 #include "flash.h"
 #include "uart.h"
 #include "lcd_display.h"
+#include "PID.h"
+#include "pwm.h"
 
 //----------------time---------------
 u8 time_cnt = 0;
@@ -14,13 +16,96 @@ u8  Open_Heat_Value = 0;
 u8 Heat_start_std = 0;
 u16 time_heat = 0;
 u16 temp_time = 0 ;
+u16 correct_time = 0;
+u8 one_heat = 0;
+
+u16 pwm_jishu = 0;
+
+void Controll_Heat ( u16 temp_set,u16 temp_now )
+{
+//KEY_printf ( "temp_set val:%d \r\n",temp_set );
+	if ( temp_now >  temp_set   )
+	{
+		//	KEY_printf ( "close_heat \r\n");
+		set_pwm ( 0 ); // 关闭加热丝
+	}
+	else if ( temp_now < ( temp_set - Open_Heat_Value ) )
+	{
+		//KEY_printf ( "open_heat \r\n");
+		set_pwm ( 10 ); //打开加热丝
+	}
+}
+
+
+
+
+void Heat_Operation ( u16 temp )
+{
+if(one_heat == 0)
+{
+	pwm_jishu++;
+	if ( temp > pwm_jishu )
+	{
+		set_pwm ( 10 );
+
+	}
+	else
+	{
+		set_pwm ( 0 );
+
+	}
+	if ( pwm_jishu == pwm_count )
+	{
+		pwm_jishu =0;
+	}
+}
+}
+
+
 void set_time_sec_val ( u16 sec )
 {
 	time_sec = sec;
 	time_cnt = 0;
 	gm_printf ( "set time second:%d\r\n",sec );
 }
+void set_correct_time ( u8 gap )
+{
 
+	switch ( gap )
+	{
+		case GAP_WARM:
+			correct_time = corrected_time_warm_temp;
+			break;
+		case GAP_1:
+			correct_time = corrected_time_GAP_1_temp;
+			break;
+		case GAP_2:
+			correct_time = corrected_time_GAP_2_temp;
+			break;
+		case GAP_3:
+			correct_time = corrected_time_GAP_3_temp;
+			break;
+		case GAP_4:
+			correct_time = corrected_time_GAP_4_temp;
+			break;
+		case GAP_5:
+			correct_time = corrected_time_GAP_5_temp;
+			break;
+		case GAP_6:
+			correct_time = corrected_time_GAP_6_temp;
+			break;
+		case GAP_7:
+			correct_time = corrected_time_GAP_7_temp;
+			break;
+		case GAP_8:
+			correct_time = corrected_time_GAP_8_temp;
+			break;
+		case GAP_9:
+			correct_time = corrected_time_GAP_9_temp;
+			break;
+
+	}
+}
 static void set_correct_Value ( void )
 {
 	switch ( flash_info.gap )
@@ -62,17 +147,30 @@ static void set_correct_Value ( void )
 }
 static void set_heat_val ( void )
 {
-	if ( Heat_start_std == 1 )
+	if ( Heat_start_std == 2 )
 	{
-		if ( ++time_heat > Heat_Value )
+
+
+		if ( ++time_heat > correct_time )
 		{
 			KEY_printf ( "exchange_heat_value \r\n" );
 			Heat_start_std = 0;
 			time_heat = 0;
+			one_heat = 0;
 
-            set_correct_Value (  );
+			set_correct_Value (  );
 		}
 	}
+//	if (Heat_start_std == 2)
+//		{
+//		   one_heat = 1;
+//           if ( ++time_heat > Heat_Value)
+//           	{
+//           	   one_heat = 0;
+//              Heat_start_std = 1;
+//		    }
+//
+//	    }
 }
 
 void set_time_sec ( void )
@@ -197,6 +295,7 @@ void TIMER0_Rpt ( void ) interrupt TIMER0_VECTOR
 			//gm_printf("time_sec=%d \r\n",time_sec);
 			time_cnt = 0;
 		}
+		Heat_Operation ( spid.iPriVal );
 	}
 }
 

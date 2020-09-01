@@ -273,16 +273,8 @@ void temperature_handle ( void )
 						Open_Heat_Value = corrected_value_warm_temp	;
 					}
 				}
-
-				if (one_heat == 0)
-					{
 				spid.iCurVal = temp*10;
 				PID_Operation ();
-					}
-				else if(one_heat == 1)
-					{
-                     Controll_Heat (One_Heat_Temp , temp);
-				    }
 				lcd_display_time ( flash_info.timer );
 				lcd_display_gap ( flash_info.gap );
 				//	Set_Temp ( temp );

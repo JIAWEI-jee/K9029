@@ -41,23 +41,20 @@ void Controll_Heat ( u16 temp_set,u16 temp_now )
 
 void Heat_Operation ( u16 temp )
 {
-	if ( one_heat == 0 )
+	pwm_jishu++;
+	if ( temp > pwm_jishu )
 	{
-		pwm_jishu++;
-		if ( temp > pwm_jishu )
-		{
-			set_pwm ( 10 );
+		set_pwm ( 10 );
 
-		}
-		else
-		{
-			set_pwm ( 0 );
+	}
+	else
+	{
+		set_pwm ( 0 );
 
-		}
-		if ( pwm_jishu == pwm_count )
-		{
-			pwm_jishu =0;
-		}
+	}
+	if ( pwm_jishu == pwm_count )
+	{
+		pwm_jishu =0;
 	}
 }
 
