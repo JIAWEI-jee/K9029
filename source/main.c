@@ -251,10 +251,10 @@ void temperature_handle ( void )
 
 		//	KEY_printf ( "adv1 = %d adv3 =%d \r\n",adc_val1,adc_val3 );  //pjw set
 		temp = temp_calc ( adc_val1, adc_val3 );
-		KEY_printf ( "temp val:%d \r\n",temp );
-		temp =	calibration_temperature ( temp );
-		KEY_printf ( "cali_temp val:%d \r\n",temp );
-
+//			KEY_printf ( "temp val:%d \r\n",temp );
+	temp =	calibration_temperature(temp);
+		KEY_printf ( "%d \r\n",temp );
+    
 		if ( adc_val1 >50 )
 		{
 			if ( get_device_state() == ON )
@@ -289,10 +289,11 @@ void temperature_handle ( void )
 					cali_display_std = 1;
 				}
 				else
-				{
-					set_pwm ( 0 );
-					ht1621_send_cmd ( LCD_OFF );
-				}
+				{	
+				set_pwm ( 0 );
+				ht1621_send_cmd ( LCD_OFF );
+					cali_display_std = 0;
+				}	
 			}
 			fault_std = 0;
 		}

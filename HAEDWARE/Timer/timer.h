@@ -4,6 +4,7 @@
 
 #define overrang_time   (60*60*2)
 #define Heat_Value      (60*4)
+#define cali_time        (60*2*100)
 #define Length          8
 #define Temperature_Value         91.0624
 #define H_0_5           (60*30)
