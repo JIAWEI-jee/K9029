@@ -161,6 +161,16 @@ static void set_heat_val ( void )
 			set_correct_Value (  );
 		}
 	}
+//	if (Heat_start_std == 2)
+//		{
+//		   one_heat = 1;
+//           if ( ++time_heat > Heat_Value)
+//           	{
+//           	   one_heat = 0;
+//              Heat_start_std = 1;
+//		    }
+//
+//	    }
 }
 
 void set_time_sec ( void )
@@ -287,12 +297,12 @@ void TIMER0_Rpt ( void ) interrupt TIMER0_VECTOR
 		}
 		Heat_Operation ( spid.iPriVal );
 	}
-	else if ( calibration_std == 1 )
+		else if (calibration_std == 1)
 	{
-		if ( ++exti_cail_cnt > cali_time )
+	  if(++exti_cail_cnt > cali_time)
 		{
-			calibration_std = 0;
-			exti_cail_cnt = 0;
+		  calibration_std = 0;
+		  exti_cail_cnt = 0;
 		}
 	}
 }
