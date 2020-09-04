@@ -297,10 +297,11 @@ void temperature_handle ( void )
 					cali_display_std = 1;
 				}
 				else
-				{
-					set_pwm ( 0 );
-					ht1621_send_cmd ( LCD_OFF );
-				}
+				{	
+				set_pwm ( 0 );
+				ht1621_send_cmd ( LCD_OFF );
+					cali_display_std = 0;
+				}	
 			}
 			fault_std = 0;
 		}

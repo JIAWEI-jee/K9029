@@ -4,7 +4,7 @@
 #include "lcd_display.h"
 #include "PID.h"
 #include "pwm.h"
-
+#include "key.h"
 //----------------time---------------
 u8 time_cnt = 0;
 u16 time_sec = 0;
@@ -18,7 +18,7 @@ u16 time_heat = 0;
 u16 temp_time = 0 ;
 u16 correct_time = 0;
 u8 one_heat = 0;
-
+u16 exti_cail_cnt = 0;
 u16 pwm_jishu = 0;
 
 void Controll_Heat ( u16 temp_set,u16 temp_now )
@@ -296,6 +296,14 @@ void TIMER0_Rpt ( void ) interrupt TIMER0_VECTOR
 			time_cnt = 0;
 		}
 		Heat_Operation ( spid.iPriVal );
+	}
+		else if (calibration_std == 1)
+	{
+	  if(++exti_cail_cnt > cali_time)
+		{
+		  calibration_std = 0;
+		  exti_cail_cnt = 0;
+		}
 	}
 }
 

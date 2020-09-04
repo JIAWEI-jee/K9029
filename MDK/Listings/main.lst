@@ -1,4 +1,4 @@
-C51 COMPILER V9.56.0.0   MAIN                                                              09/03/2020 17:55:59 PAGE 1   
+C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 10:56:21 PAGE 1   
 
 
 C51 COMPILER V9.56.0.0, COMPILATION OF MODULE MAIN
@@ -62,7 +62,7 @@ line level    source
   50   2          {
   51   3      
   52   3            set_device_state ( OFF );
-C51 COMPILER V9.56.0.0   MAIN                                                              09/03/2020 17:55:59 PAGE 2   
+C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 10:56:21 PAGE 2   
 
   53   3            ht1621_all_clear();
   54   3            set_pwm ( 0 );
@@ -126,7 +126,7 @@ line level    source
  112   4            }
  113   3            else
  114   3            {
-C51 COMPILER V9.56.0.0   MAIN                                                              09/03/2020 17:55:59 PAGE 3   
+C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 10:56:21 PAGE 3   
 
  115   4              flash_info.timer = TIMER_ON;
  116   4            }
@@ -190,7 +190,7 @@ line level    source
  174          {
  175   1        u8 i = 0;
  176   1        u8 basi_tmp = 50;
-C51 COMPILER V9.56.0.0   MAIN                                                              09/03/2020 17:55:59 PAGE 4   
+C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 10:56:21 PAGE 4   
 
  177   1        u8 k = 10;
  178   1        float u1 = 0;
@@ -254,7 +254,7 @@ line level    source
  236          
  237          
  238          
-C51 COMPILER V9.56.0.0   MAIN                                                              09/03/2020 17:55:59 PAGE 5   
+C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 10:56:21 PAGE 5   
 
  239          void temperature_handle ( void )
  240          {
@@ -317,137 +317,138 @@ line level    source
  297   5                cali_display_std = 1;
  298   5              }
  299   4              else
- 300   4              {
-C51 COMPILER V9.56.0.0   MAIN                                                              09/03/2020 17:55:59 PAGE 6   
+ 300   4              { 
+C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 10:56:21 PAGE 6   
 
- 301   5                set_pwm ( 0 );
- 302   5                ht1621_send_cmd ( LCD_OFF );
- 303   5              }
- 304   4            }
- 305   3            fault_std = 0;
- 306   3          }
- 307   2          else
- 308   2          {
- 309   3            calibration_std = 0;
- 310   3            cali_display_std = 0;
- 311   3            ht1621_all_clear();
- 312   3            set_pwm ( 0 );
- 313   3            error_std = Error_STD;
- 314   3            lcd_display_gap ( error_std );
- 315   3            fault_std = 1;
- 316   3          }
- 317   2      
- 318   2        }
- 319   1      
+ 301   5              set_pwm ( 0 );
+ 302   5              ht1621_send_cmd ( LCD_OFF );
+ 303   5                cali_display_std = 0;
+ 304   5              } 
+ 305   4            }
+ 306   3            fault_std = 0;
+ 307   3          }
+ 308   2          else
+ 309   2          {
+ 310   3            calibration_std = 0;
+ 311   3            cali_display_std = 0;
+ 312   3            ht1621_all_clear();
+ 313   3            set_pwm ( 0 );
+ 314   3            error_std = Error_STD;
+ 315   3            lcd_display_gap ( error_std );
+ 316   3            fault_std = 1;
+ 317   3          }
+ 318   2      
+ 319   2        }
  320   1      
- 321   1      }
- 322          
+ 321   1      
+ 322   1      }
  323          
  324          
  325          
- 326          void main ( void )
- 327          {
- 328   1        device_init();
- 329   1      
- 330   1        uart_init();
- 331   1        adc_init();
- 332   1        EA = 1;//开启总中断
- 333   1        key_init();
- 334   1        time0_init();
- 335   1        flash_init();
- 336   1        pwm_init ( 200 );
- 337   1        init_lcd_ht1621b();
- 338   1        delay_ms ( 800 );
- 339   1        wdt_init ( 2 );
- 340   1        PID_Init();
- 341   1        set_pwm ( 0 );
- 342   1        gm_printf ( "\r\n==================================\r\n" );
- 343   1        gm_printf ( "sku:K%d \r\n", ( u16 ) SKU );
- 344   1        gm_printf ( "soft version:%s \r\n",SOFT_VER );
- 345   1        gm_printf ( "gap %d \r\n", ( u16 ) flash_info.gap );      //挡位
- 346   1        gm_printf ( "timer %d \r\n", ( u16 ) flash_info.timer );  // 时间长度
- 347   1        gm_printf ( "==================================\r\n" );
- 348   1      
- 349   1        while ( 1 )
- 350   1        {
- 351   2          key_handle();
- 352   2          temperature_handle();
- 353   2          // Protect();
- 354   2      
- 355   2          clear_wdt();
- 356   2      
- 357   2        }
- 358   1      }
- 359          
+ 326          
+ 327          void main ( void )
+ 328          {
+ 329   1        device_init();
+ 330   1      
+ 331   1        uart_init();
+ 332   1        adc_init();
+ 333   1        EA = 1;//开启总中断
+ 334   1        key_init();
+ 335   1        time0_init();
+ 336   1        flash_init();
+ 337   1        pwm_init ( 200 );
+ 338   1        init_lcd_ht1621b();
+ 339   1        delay_ms ( 800 );
+ 340   1        wdt_init ( 2 );
+ 341   1        PID_Init();
+ 342   1        set_pwm ( 0 );
+ 343   1        gm_printf ( "\r\n==================================\r\n" );
+ 344   1        gm_printf ( "sku:K%d \r\n", ( u16 ) SKU );
+ 345   1        gm_printf ( "soft version:%s \r\n",SOFT_VER );
+ 346   1        gm_printf ( "gap %d \r\n", ( u16 ) flash_info.gap );      //挡位
+ 347   1        gm_printf ( "timer %d \r\n", ( u16 ) flash_info.timer );  // 时间长度
+ 348   1        gm_printf ( "==================================\r\n" );
+ 349   1      
+ 350   1        while ( 1 )
+ 351   1        {
+ 352   2          key_handle();
+ 353   2          temperature_handle();
+ 354   2          // Protect();
+ 355   2      
+ 356   2          clear_wdt();
+ 357   2      
+ 358   2        }
+ 359   1      }
  360          
  361          
- 362          void Set_Temp ( u8 gap )
-C51 COMPILER V9.56.0.0   MAIN                                                              09/03/2020 17:55:59 PAGE 7   
+ 362          
+C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 10:56:21 PAGE 7   
 
- 363          {
- 364   1      
- 365   1        switch ( gap )
- 366   1        {
- 367   2          case GAP_WARM:
- 368   2            spid.iSetVal = GAP_WARM_temp*10;
- 369   2            break;
- 370   2          case GAP_1:
- 371   2            spid.iSetVal = GAP_1_temp*10;
- 372   2            break;
- 373   2          case GAP_2:
- 374   2            spid.iSetVal = GAP_2_temp*10;
- 375   2            break;
- 376   2          case GAP_3:
- 377   2            spid.iSetVal = GAP_3_temp*10;
- 378   2            break;
- 379   2          case GAP_4:
- 380   2            spid.iSetVal = GAP_4_temp*10;
- 381   2            break;
- 382   2          case GAP_5:
- 383   2            spid.iSetVal = GAP_5_temp*10;
- 384   2            break;
- 385   2          case GAP_6:
- 386   2            spid.iSetVal = GAP_6_temp*10;
- 387   2            break;
- 388   2          case GAP_7:
- 389   2            spid.iSetVal = GAP_7_temp*10;
- 390   2            break;
- 391   2          case GAP_8:
- 392   2            spid.iSetVal = GAP_8_temp*10;
- 393   2            break;
- 394   2          case GAP_9:
- 395   2            spid.iSetVal = GAP_9_temp*10;
- 396   2            break;
- 397   2        }
- 398   1      }
- 399          
+ 363          void Set_Temp ( u8 gap )
+ 364          {
+ 365   1      
+ 366   1        switch ( gap )
+ 367   1        {
+ 368   2          case GAP_WARM:
+ 369   2            spid.iSetVal = GAP_WARM_temp*10;
+ 370   2            break;
+ 371   2          case GAP_1:
+ 372   2            spid.iSetVal = GAP_1_temp*10;
+ 373   2            break;
+ 374   2          case GAP_2:
+ 375   2            spid.iSetVal = GAP_2_temp*10;
+ 376   2            break;
+ 377   2          case GAP_3:
+ 378   2            spid.iSetVal = GAP_3_temp*10;
+ 379   2            break;
+ 380   2          case GAP_4:
+ 381   2            spid.iSetVal = GAP_4_temp*10;
+ 382   2            break;
+ 383   2          case GAP_5:
+ 384   2            spid.iSetVal = GAP_5_temp*10;
+ 385   2            break;
+ 386   2          case GAP_6:
+ 387   2            spid.iSetVal = GAP_6_temp*10;
+ 388   2            break;
+ 389   2          case GAP_7:
+ 390   2            spid.iSetVal = GAP_7_temp*10;
+ 391   2            break;
+ 392   2          case GAP_8:
+ 393   2            spid.iSetVal = GAP_8_temp*10;
+ 394   2            break;
+ 395   2          case GAP_9:
+ 396   2            spid.iSetVal = GAP_9_temp*10;
+ 397   2            break;
+ 398   2        }
+ 399   1      }
  400          
  401          
  402          
- 403          void Protect ( void )
- 404          {
- 405   1        if ( over_rang_time_std == 1 )
- 406   1        {
- 407   2          if ( flash_info.gap > GAP_3 )
- 408   2          {
- 409   3            flash_info.gap = GAP_3;
- 410   3            lcd_display_gap ( flash_info.gap );
- 411   3            flah_save_data();
- 412   3            over_rang_time_std = 0;
- 413   3          }
- 414   2        }
- 415   1      }
- 416          
+ 403          
+ 404          void Protect ( void )
+ 405          {
+ 406   1        if ( over_rang_time_std == 1 )
+ 407   1        {
+ 408   2          if ( flash_info.gap > GAP_3 )
+ 409   2          {
+ 410   3            flash_info.gap = GAP_3;
+ 411   3            lcd_display_gap ( flash_info.gap );
+ 412   3            flah_save_data();
+ 413   3            over_rang_time_std = 0;
+ 414   3          }
+ 415   2        }
+ 416   1      }
  417          
+ 418          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =   1652    ----
+   CODE SIZE        =   1657    ----
    CONSTANT SIZE    =    142    ----
    XDATA SIZE       =      5      20
-   PDATA SIZE       =   ----    ----
-C51 COMPILER V9.56.0.0   MAIN                                                              09/03/2020 17:55:59 PAGE 8   
+C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 10:56:21 PAGE 8   
 
+   PDATA SIZE       =   ----    ----
    DATA SIZE        =   ----    ----
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
