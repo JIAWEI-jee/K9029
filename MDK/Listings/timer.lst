@@ -1,4 +1,4 @@
-C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 11:19:53 PAGE 1   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 15:42:22 PAGE 1   
 
 
 C51 COMPILER V9.56.0.0, COMPILATION OF MODULE TIMER
@@ -62,7 +62,7 @@ line level    source
   50   2          case GAP_6:
   51   2            correct_time = corrected_time_GAP_6_temp;
   52   2            break;
-C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 11:19:53 PAGE 2   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 15:42:22 PAGE 2   
 
   53   2          case GAP_7:
   54   2            correct_time = corrected_time_GAP_7_temp;
@@ -126,7 +126,7 @@ line level    source
  112   3            KEY_printf ( "exchange_heat_value \r\n" );
  113   3            Heat_start_std = 0;
  114   3            time_heat = 0;
-C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 11:19:53 PAGE 3   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 15:42:22 PAGE 3   
 
  115   3            one_heat = 0;
  116   3      
@@ -190,7 +190,7 @@ line level    source
  174          
  175          void time0_init ( void )
  176          {
-C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 11:19:53 PAGE 4   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 15:42:22 PAGE 4   
 
  177   1        /**********************************TIM0配置初始化**************************************/
  178   1        TCON1 = 0x00;           //Tx0定时器时钟为Fosc/12
@@ -254,7 +254,7 @@ line level    source
  236   5              }
  237   4            }
  238   3            else
-C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 11:19:53 PAGE 5   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 15:42:22 PAGE 5   
 
  239   3            {
  240   4              if ( flash_info.timer != TIMER_ON )
@@ -318,7 +318,7 @@ MODULE INFORMATION:   STATIC OVERLAYABLE
    PDATA SIZE       =   ----    ----
    DATA SIZE        =   ----    ----
    IDATA SIZE       =   ----    ----
-C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 11:19:53 PAGE 6   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 15:42:22 PAGE 6   
 
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.
