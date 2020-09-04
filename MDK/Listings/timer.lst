@@ -1,4 +1,4 @@
-C51 COMPILER V9.56.0.0   TIMER                                                             09/01/2020 15:47:58 PAGE 1   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/03/2020 17:56:00 PAGE 1   
 
 
 C51 COMPILER V9.56.0.0, COMPILATION OF MODULE TIMER
@@ -62,7 +62,7 @@ line level    source
   50   3      
   51   3          }
   52   2          else
-C51 COMPILER V9.56.0.0   TIMER                                                             09/01/2020 15:47:58 PAGE 2   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/03/2020 17:56:00 PAGE 2   
 
   53   2          {
   54   3            set_pwm ( 0 );
@@ -126,7 +126,7 @@ line level    source
  112   1        {
  113   2          case GAP_WARM:
  114   2            Open_Heat_Value = corrected_value_warm_temp;
-C51 COMPILER V9.56.0.0   TIMER                                                             09/01/2020 15:47:58 PAGE 3   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/03/2020 17:56:00 PAGE 3   
 
  115   2            break;
  116   2          case GAP_1:
@@ -190,7 +190,7 @@ line level    source
  174   1      }
  175          
  176          void set_time_sec ( void )
-C51 COMPILER V9.56.0.0   TIMER                                                             09/01/2020 15:47:58 PAGE 4   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/03/2020 17:56:00 PAGE 4   
 
  177          {
  178   1        time_cnt = 0;
@@ -254,7 +254,7 @@ line level    source
  236   1        EA = 1;               //打开总中断
  237   1      }
  238          
-C51 COMPILER V9.56.0.0   TIMER                                                             09/01/2020 15:47:58 PAGE 5   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/03/2020 17:56:00 PAGE 5   
 
  239          
  240          
@@ -318,7 +318,7 @@ line level    source
  298   2          Heat_Operation ( spid.iPriVal );
  299   2        }
  300   1      }
-C51 COMPILER V9.56.0.0   TIMER                                                             09/01/2020 15:47:58 PAGE 6   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/03/2020 17:56:00 PAGE 6   
 
  301          
  302          void time_Print ( void )

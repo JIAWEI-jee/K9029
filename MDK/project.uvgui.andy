@@ -3399,7 +3399,7 @@
       </Doc>
       <Doc>
         <Name>..\HAEDWARE\Timer\timer.c</Name>
-        <ColumnNumber>26</ColumnNumber>
+        <ColumnNumber>25</ColumnNumber>
         <TopLine>19</TopLine>
         <CurrentLine>35</CurrentLine>
         <Folding>1</Folding>
@@ -3408,9 +3408,9 @@
       </Doc>
       <Doc>
         <Name>..\source\main.c</Name>
-        <ColumnNumber>35</ColumnNumber>
-        <TopLine>354</TopLine>
-        <CurrentLine>389</CurrentLine>
+        <ColumnNumber>7</ColumnNumber>
+        <TopLine>270</TopLine>
+        <CurrentLine>291</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
