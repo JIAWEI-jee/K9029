@@ -1,4 +1,4 @@
-C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 11:37:41 PAGE 1   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/07/2020 10:03:38 PAGE 1   
 
 
 C51 COMPILER V9.56.0.0, COMPILATION OF MODULE TIMER
@@ -62,7 +62,7 @@ line level    source
   50   3      
   51   3          }
   52   2          else
-C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 11:37:41 PAGE 2   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/07/2020 10:03:38 PAGE 2   
 
   53   2          {
   54   3            set_pwm ( 0 );
@@ -126,7 +126,7 @@ line level    source
  112   1        {
  113   2          case GAP_WARM:
  114   2            Open_Heat_Value = corrected_value_warm_temp;
-C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 11:37:41 PAGE 3   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/07/2020 10:03:38 PAGE 3   
 
  115   2            break;
  116   2          case GAP_1:
@@ -190,7 +190,7 @@ line level    source
  174   2        }
  175   1        else if ( flash_info.timer == TIMER_0_5H )
  176   1        {
-C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 11:37:41 PAGE 4   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/07/2020 10:03:38 PAGE 4   
 
  177   2          time_sec = 30*60;
  178   2          cnt_heat_time = 0;
@@ -254,7 +254,7 @@ line level    source
  236   2          time_cnt++;
  237   2          if ( time_cnt >= 100 )
  238   2          {
-C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 11:37:41 PAGE 5   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/07/2020 10:03:38 PAGE 5   
 
  239   3            set_heat_val();
  240   3      
@@ -318,7 +318,7 @@ line level    source
  298   1      }
  299          
  300          void time_Print ( void )
-C51 COMPILER V9.56.0.0   TIMER                                                             09/04/2020 11:37:41 PAGE 6   
+C51 COMPILER V9.56.0.0   TIMER                                                             09/07/2020 10:03:38 PAGE 6   
 
  301          {
  302   1        switch ( ++temp_time )
@@ -348,7 +348,7 @@ line level    source
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =   1004    ----
+   CODE SIZE        =    952    ----
    CONSTANT SIZE    =    222    ----
    XDATA SIZE       =     21       4
    PDATA SIZE       =   ----    ----

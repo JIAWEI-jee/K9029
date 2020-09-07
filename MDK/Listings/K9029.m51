@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        09/04/2020  11:37:42  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/07/2020  10:03:38  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
@@ -59,7 +59,7 @@ INPUT MODULES INCLUDED:
 
 
 LINK MAP OF MODULE:  .\output\K9029 (?C_STARTUP)
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 2
 
 
 
@@ -119,7 +119,7 @@ LINK MAP OF MODULE:  .\output\K9029 (?C_STARTUP)
                     FEBFH     0041H                  *** GAP ***
             XDATA   FF00H     0001H     ABSOLUTE     
             XDATA   FF01H     0001H     ABSOLUTE     
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 3
 
 
             XDATA   FF02H     0001H     ABSOLUTE     
@@ -179,7 +179,7 @@ LINK MAP OF MODULE:  .\output\K9029 (?C_STARTUP)
             CODE    0026H     096AH     UNIT         ?C?LIB_CODE
             CODE    0990H     0483H     UNIT         ?PR?PRINTF?PRINTF
             CODE    0E13H     0428H     UNIT         ?PR?PID_OPERATION?PID
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 4
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 4
 
 
             CODE    123BH     0200H     UNIT         ?PR?_TEMP_CALC?MAIN
@@ -202,58 +202,58 @@ LINK MAP OF MODULE:  .\output\K9029 (?C_STARTUP)
             CODE    2257H     008AH     UNIT         ?PR?_LCD_DISPLAY_TIME?LCD_DISPLAY
             CODE    22E1H     008AH     UNIT         ?PR?SET_TIME_SEC?TIMER
             CODE    236BH     007EH     UNIT         ?PR?KEY_SCAN?KEY
-            CODE    23E9H     0075H     UNIT         ?PR?_SET_CORRECT_TIME?TIMER
-            CODE    245EH     006DH     UNIT         ?PR?_FLASH_WRITEARR?FLASH
-            CODE    24CBH     006AH     UNIT         ?PR?TIME_PRINT?TIMER
-            CODE    2535H     0057H     UNIT         ?PR?SET_CORRECT_VALUE?TIMER
-            CODE    258CH     004DH     UNIT         ?PR?UART1_RPT?UART
-            CODE    25D9H     0040H     UNIT         ?PR?_FLASH_READARR?FLASH
-            CODE    2619H     003FH     UNIT         ?PR?_HT1621_SENDBIT_HIGHT?HT1621B
-            CODE    2658H     003FH     UNIT         ?PR?_HT1621_SENDBIT_LOW?HT1621B
-            CODE    2697H     003EH     UNIT         ?PR?_CONTROLL_HEAT?TIMER
-            CODE    26D5H     003DH     UNIT         ?PR?_HEAT_OPERATION?TIMER
-            CODE    2712H     003CH     UNIT         ?PR?SET_HEAT_VAL?TIMER
-            CODE    274EH     0033H     UNIT         ?PR?CHECK_FLASH?FLASH
-            CODE    2781H     002DH     UNIT         ?PR?_PRODUCTE_COM_SEND_DATA?UART
-            CODE    27AEH     002CH     UNIT         ?PR?_HT1621_WRITE_BYTE?HT1621B
-            CODE    27DAH     0029H     UNIT         ?PR?UART_INIT?UART
-            CODE    2803H     0028H     UNIT         ?PR?_FLASH_WRITEDATA?FLASH
-            CODE    282BH     0027H     UNIT         ?PR?INIT_LCD_HT1621B?LCD_DISPLAY
-            CODE    2852H     0026H     UNIT         ?PR?FLAH_SAVE_DATA?FLASH
-            CODE    2878H     0022H     UNIT         ?PR?_FLASH_ERASEBLOCK?FLASH
-            CODE    289AH     0022H     UNIT         ?PR?_PWM_INIT?PWM
-            CODE    28BCH     0020H     UNIT         ?PR?PROTECT?MAIN
-            CODE    28DCH     0020H     UNIT         ?PR?PID_INIT?PID
-            CODE    28FCH     001FH     UNIT         ?PR?_PRODUCTE_SEND_CMD?UART
-            CODE    291BH     001EH     UNIT         ?PR?HT1621_ALL_DISPLAY?LCD_DISPLAY
-            CODE    2939H     001EH     UNIT         ?PR?HT1621_ALL_CLEAR?LCD_DISPLAY
-            CODE    2957H     001CH     UNIT         ?PR?_SET_TIME_SEC_VAL?TIMER
-            CODE    2973H     001BH     UNIT         ?PR?HT1621_INIT_PIN?HT1621B
-            CODE    298EH     001BH     UNIT         ?PR?_HT1621_SEND_CMD?HT1621B
-            CODE    29A9H     001BH     UNIT         ?PR?ADC_INIT?ADC
-            CODE    29C4H     0018H     UNIT         ?PR?_SET_PWM?PWM
-            CODE    29DCH     0017H     UNIT         ?PR?_DELAY_MS?DELAY
-            CODE    29F3H     0016H     UNIT         ?PR?TIME0_INIT?TIMER
-            CODE    2A09H     0016H     UNIT         ?PR?GET_ADC_VAL?ADC
-            CODE    2A1FH     0016H     UNIT         ?PR?GET_ADC_VAL_CH?ADC
-            CODE    2A35H     0010H     UNIT         ?PR?DEVICE_INIT?MAIN
-            CODE    2A45H     000EH     UNIT         ?PR?_DELAY_US?DELAY
-            CODE    2A53H     000EH     UNIT         ?PR?LCD_TURN_OFF_TIME?LCD_DISPLAY
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 5
+            CODE    23E9H     006DH     UNIT         ?PR?_FLASH_WRITEARR?FLASH
+            CODE    2456H     006AH     UNIT         ?PR?TIME_PRINT?TIMER
+            CODE    24C0H     0057H     UNIT         ?PR?SET_CORRECT_VALUE?TIMER
+            CODE    2517H     004DH     UNIT         ?PR?UART1_RPT?UART
+            CODE    2564H     0041H     UNIT         ?PR?_SET_CORRECT_TIME?TIMER
+            CODE    25A5H     0040H     UNIT         ?PR?_FLASH_READARR?FLASH
+            CODE    25E5H     003FH     UNIT         ?PR?_HT1621_SENDBIT_HIGHT?HT1621B
+            CODE    2624H     003FH     UNIT         ?PR?_HT1621_SENDBIT_LOW?HT1621B
+            CODE    2663H     003EH     UNIT         ?PR?_CONTROLL_HEAT?TIMER
+            CODE    26A1H     003DH     UNIT         ?PR?_HEAT_OPERATION?TIMER
+            CODE    26DEH     003CH     UNIT         ?PR?SET_HEAT_VAL?TIMER
+            CODE    271AH     0033H     UNIT         ?PR?CHECK_FLASH?FLASH
+            CODE    274DH     002DH     UNIT         ?PR?_PRODUCTE_COM_SEND_DATA?UART
+            CODE    277AH     002CH     UNIT         ?PR?_HT1621_WRITE_BYTE?HT1621B
+            CODE    27A6H     0029H     UNIT         ?PR?UART_INIT?UART
+            CODE    27CFH     0028H     UNIT         ?PR?_FLASH_WRITEDATA?FLASH
+            CODE    27F7H     0027H     UNIT         ?PR?INIT_LCD_HT1621B?LCD_DISPLAY
+            CODE    281EH     0026H     UNIT         ?PR?FLAH_SAVE_DATA?FLASH
+            CODE    2844H     0022H     UNIT         ?PR?_FLASH_ERASEBLOCK?FLASH
+            CODE    2866H     0022H     UNIT         ?PR?_PWM_INIT?PWM
+            CODE    2888H     0020H     UNIT         ?PR?PROTECT?MAIN
+            CODE    28A8H     0020H     UNIT         ?PR?PID_INIT?PID
+            CODE    28C8H     001FH     UNIT         ?PR?_PRODUCTE_SEND_CMD?UART
+            CODE    28E7H     001EH     UNIT         ?PR?HT1621_ALL_DISPLAY?LCD_DISPLAY
+            CODE    2905H     001EH     UNIT         ?PR?HT1621_ALL_CLEAR?LCD_DISPLAY
+            CODE    2923H     001CH     UNIT         ?PR?_SET_TIME_SEC_VAL?TIMER
+            CODE    293FH     001BH     UNIT         ?PR?HT1621_INIT_PIN?HT1621B
+            CODE    295AH     001BH     UNIT         ?PR?_HT1621_SEND_CMD?HT1621B
+            CODE    2975H     001BH     UNIT         ?PR?ADC_INIT?ADC
+            CODE    2990H     0018H     UNIT         ?PR?_SET_PWM?PWM
+            CODE    29A8H     0017H     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    29BFH     0016H     UNIT         ?PR?TIME0_INIT?TIMER
+            CODE    29D5H     0016H     UNIT         ?PR?GET_ADC_VAL?ADC
+            CODE    29EBH     0016H     UNIT         ?PR?GET_ADC_VAL_CH?ADC
+            CODE    2A01H     0010H     UNIT         ?PR?DEVICE_INIT?MAIN
+            CODE    2A11H     000EH     UNIT         ?PR?_DELAY_US?DELAY
+            CODE    2A1FH     000EH     UNIT         ?PR?LCD_TURN_OFF_TIME?LCD_DISPLAY
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 5
 
 
-            CODE    2A61H     000DH     UNIT         ?PR?_WDT_INIT?WDT
-            CODE    2A6EH     000CH     UNIT         ?PR?_HAL_UART_PUTCHAR?UART
-            CODE    2A7AH     000CH     UNIT         ?CO?PID
-            CODE    2A86H     0009H     UNIT         ?PR?RELEASE_HT1621B_PIN?HT1621B
-            CODE    2A8FH     0006H     UNIT         ?PR?GET_DEVICE_STATE?FLASH
-            CODE    2A95H     0006H     UNIT         ?PR?_SET_DEVICE_STATE?FLASH
-            CODE    2A9BH     0006H     UNIT         ?PR?_PUTCHAR?UART
-            CODE    2AA1H     0005H     UNIT         ?PR?LCD_HT1621B_ON?LCD_DISPLAY
-            CODE    2AA6H     0005H     UNIT         ?PR?LCD_HT1621B_OFF?LCD_DISPLAY
-            CODE    2AABH     0004H     UNIT         ?PR?CLEAR_WDT?WDT
-            CODE    2AAFH     0003H     UNIT         ?PR?_LCD_DELAY_US?DELAY
-            CODE    2AB2H     0003H     UNIT         ?PR?_PRODUCTE_COM_SEND_ONE_BIT?UART
+            CODE    2A2DH     000DH     UNIT         ?PR?_WDT_INIT?WDT
+            CODE    2A3AH     000CH     UNIT         ?PR?_HAL_UART_PUTCHAR?UART
+            CODE    2A46H     000CH     UNIT         ?CO?PID
+            CODE    2A52H     0009H     UNIT         ?PR?RELEASE_HT1621B_PIN?HT1621B
+            CODE    2A5BH     0006H     UNIT         ?PR?GET_DEVICE_STATE?FLASH
+            CODE    2A61H     0006H     UNIT         ?PR?_SET_DEVICE_STATE?FLASH
+            CODE    2A67H     0006H     UNIT         ?PR?_PUTCHAR?UART
+            CODE    2A6DH     0005H     UNIT         ?PR?LCD_HT1621B_ON?LCD_DISPLAY
+            CODE    2A72H     0005H     UNIT         ?PR?LCD_HT1621B_OFF?LCD_DISPLAY
+            CODE    2A77H     0004H     UNIT         ?PR?CLEAR_WDT?WDT
+            CODE    2A7BH     0003H     UNIT         ?PR?_LCD_DELAY_US?DELAY
+            CODE    2A7EH     0003H     UNIT         ?PR?_PRODUCTE_COM_SEND_ONE_BIT?UART
 
 
 
@@ -299,7 +299,7 @@ SEGMENT                                        BIT_GROUP          DATA_GROUP    
 
 ?PR?CHECK_FLASH?FLASH                       -----    -----      -----    -----      -----    -----
   +--> ?PR?_FLASH_READ_ADDR?FLASH
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 6
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 6
 
 
 
@@ -359,7 +359,7 @@ SEGMENT                                        BIT_GROUP          DATA_GROUP    
   +--> ?PR?KEY_DRIVER?KEY
   +--> ?PR?CALIBRATION_KEY_DRIVER?KEY
   +--> ?PR?GET_DEVICE_STATE?FLASH
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 7
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 7
 
 
   +--> ?PR?FLAH_SAVE_DATA?FLASH
@@ -419,7 +419,7 @@ SEGMENT                                        BIT_GROUP          DATA_GROUP    
 
 ?PR?_PRODUCTE_COM_SEND_DATA?UART            -----    -----      -----    -----      000DH    0003H
   +--> ?PR?_PRODUCTE_COM_SEND_ONE_BIT?UART
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 8
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 8
 
 
 
@@ -479,7 +479,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   D:00A0H         SYMBOL        PPAGE_SFR
   D:0081H         SYMBOL        SP
   C:21CBH         SYMBOL        STARTUP1
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 9
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 9
 
 
   N:0000H         SYMBOL        XBPSTACK
@@ -529,7 +529,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:143BH         PUBLIC        temperature_handle
   X:FF17H         PUBLIC        P2M7
   X:FEBDH         PUBLIC        TRMEN
-  C:2A35H         PUBLIC        device_init
+  C:2A01H         PUBLIC        device_init
   X:FE75H         PUBLIC        CTKVS
   D:00A8H         PUBLIC        IE
   D:00F8H         PUBLIC        RSTFR
@@ -539,7 +539,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   X:FFA5H         PUBLIC        SCK_MAP
   X:FFA2H         PUBLIC        SCL_MAP
   C:20ACH         PUBLIC        _Set_Temp
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 10
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 10
 
 
   C:2007H         PUBLIC        main
@@ -573,7 +573,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   D:008EH         PUBLIC        CLKSWR
   X:00CDH         PUBLIC        first_heat_std
   X:FF90H         PUBLIC        PWM0_MAP
-  C:28BCH         PUBLIC        Protect
+  C:2888H         PUBLIC        Protect
   X:FFA4H         PUBLIC        SS_MAP
   X:FE80H         PUBLIC        TCON1
   X:FF9CH         PUBLIC        PWM3_MAP
@@ -586,12 +586,12 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   D:00D0H         PUBLIC        PSW
   X:FF00H         PUBLIC        P0M0
   -------         PROC          DEVICE_INIT
-  C:2A35H         LINE#         25
-  C:2A35H         LINE#         26
-  C:2A35H         LINE#         29
-  C:2A38H         LINE#         30
-  C:2A3EH         LINE#         31
-  C:2A44H         LINE#         32
+  C:2A01H         LINE#         25
+  C:2A01H         LINE#         26
+  C:2A01H         LINE#         29
+  C:2A04H         LINE#         30
+  C:2A0AH         LINE#         31
+  C:2A10H         LINE#         32
   -------         ENDPROC       DEVICE_INIT
   -------         PROC          KEY_HANDLE
   -------         DO            
@@ -599,7 +599,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   -------         ENDDO         
   C:1B52H         LINE#         35
   C:1B52H         LINE#         36
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 11
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 11
 
 
   C:1B52H         LINE#         37
@@ -659,7 +659,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:1C1BH         LINE#         106
   C:1C22H         LINE#         107
   C:1C22H         LINE#         109
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 12
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 12
 
 
   C:1C2BH         LINE#         110
@@ -719,7 +719,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:1E90H         LINE#         166
   C:1E90H         LINE#         167
   C:1E98H         LINE#         169
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 13
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 13
 
 
   -------         ENDPROC       _CALIBRATION_TEMPERATURE
@@ -779,7 +779,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:1433H         LINE#         234
   C:143AH         LINE#         235
   -------         ENDPROC       _TEMP_CALC
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 14
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 14
 
 
   -------         PROC          TEMPERATURE_HANDLE
@@ -839,7 +839,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:155AH         LINE#         296
   C:1562H         LINE#         297
   C:1568H         LINE#         298
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 15
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 15
 
 
   C:156AH         LINE#         300
@@ -899,7 +899,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:20DAH         LINE#         367
   C:20DAH         LINE#         368
   C:20DAH         LINE#         369
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 16
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 16
 
 
   C:20E4H         LINE#         370
@@ -933,19 +933,19 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:213CH         LINE#         399
   -------         ENDPROC       _SET_TEMP
   -------         PROC          PROTECT
-  C:28BCH         LINE#         404
-  C:28BCH         LINE#         405
-  C:28BCH         LINE#         406
-  C:28C3H         LINE#         407
-  C:28C3H         LINE#         408
-  C:28CCH         LINE#         409
-  C:28CCH         LINE#         410
-  C:28CFH         LINE#         411
-  C:28D3H         LINE#         412
-  C:28D6H         LINE#         413
-  C:28DBH         LINE#         414
-  C:28DBH         LINE#         415
-  C:28DBH         LINE#         416
+  C:2888H         LINE#         404
+  C:2888H         LINE#         405
+  C:2888H         LINE#         406
+  C:288FH         LINE#         407
+  C:288FH         LINE#         408
+  C:2898H         LINE#         409
+  C:2898H         LINE#         410
+  C:289BH         LINE#         411
+  C:289FH         LINE#         412
+  C:28A2H         LINE#         413
+  C:28A7H         LINE#         414
+  C:28A7H         LINE#         415
+  C:28A7H         LINE#         416
   -------         ENDPROC       PROTECT
   -------         ENDMOD        MAIN
 
@@ -956,70 +956,70 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
   B:00A8H.7       PUBLIC        EA
-  C:246AH         PUBLIC        _Flash_WriteArr
+  C:23F5H         PUBLIC        _Flash_WriteArr
   C:0003H         PUBLIC        _flash_read_addr
   D:00A8H         PUBLIC        IE
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 17
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 17
 
 
   D:00FCH         PUBLIC        IAP_CMD
   D:00F8H         PUBLIC        RSTFR
-  C:2A8FH         PUBLIC        get_device_state
+  C:2A5BH         PUBLIC        get_device_state
   X:00B5H         PUBLIC        flash_info
-  C:2A95H         PUBLIC        _set_device_state
+  C:2A61H         PUBLIC        _set_device_state
   C:16E4H         PUBLIC        flash_init
-  C:2852H         PUBLIC        flah_save_data
-  C:2878H         PUBLIC        _Flash_EraseBlock
+  C:281EH         PUBLIC        flah_save_data
+  C:2844H         PUBLIC        _Flash_EraseBlock
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:00B8H         PUBLIC        IE1
   D:00D8H         PUBLIC        IE2
   D:00FBH         PUBLIC        IAP_DATA
   D:00F9H         PUBLIC        IAP_ADDR
-  C:2803H         PUBLIC        _FLASH_WriteData
-  C:274EH         SYMBOL        check_flash
+  C:27CFH         PUBLIC        _FLASH_WriteData
+  C:271AH         SYMBOL        check_flash
   X:00BAH         PUBLIC        flash_check
-  C:25D9H         PUBLIC        _Flash_ReadArr
+  C:25A5H         PUBLIC        _Flash_ReadArr
   X:00BEH         PUBLIC        device_state
   D:00D0H         PUBLIC        PSW
   -------         PROC          GET_DEVICE_STATE
-  C:2A8FH         LINE#         9
-  C:2A8FH         LINE#         10
-  C:2A8FH         LINE#         11
-  C:2A94H         LINE#         12
+  C:2A5BH         LINE#         9
+  C:2A5BH         LINE#         10
+  C:2A5BH         LINE#         11
+  C:2A60H         LINE#         12
   -------         ENDPROC       GET_DEVICE_STATE
   -------         PROC          _SET_DEVICE_STATE
   D:0007H         SYMBOL        state
-  C:2A95H         LINE#         14
-  C:2A95H         LINE#         15
-  C:2A95H         LINE#         16
-  C:2A9AH         LINE#         17
+  C:2A61H         LINE#         14
+  C:2A61H         LINE#         15
+  C:2A61H         LINE#         16
+  C:2A66H         LINE#         17
   -------         ENDPROC       _SET_DEVICE_STATE
   -------         PROC          _FLASH_ERASEBLOCK
   D:0006H         SYMBOL        addr
-  C:2878H         LINE#         27
-  C:287FH         LINE#         28
-  C:287FH         LINE#         29
-  C:2885H         LINE#         30
-  C:2889H         LINE#         31
-  C:288FH         LINE#         32
-  C:2895H         LINE#         33
+  C:2844H         LINE#         27
+  C:284BH         LINE#         28
+  C:284BH         LINE#         29
+  C:2851H         LINE#         30
+  C:2855H         LINE#         31
+  C:285BH         LINE#         32
+  C:2861H         LINE#         33
   -------         ENDPROC       _FLASH_ERASEBLOCK
   -------         PROC          _FLASH_WRITEDATA
   D:0007H         SYMBOL        fuc_SaveData
   D:0004H         SYMBOL        addr
-  C:2803H         LINE#         43
-  C:280AH         LINE#         44
-  C:280AH         LINE#         45
-  C:280CH         LINE#         46
-  C:2812H         LINE#         47
-  C:281AH         LINE#         48
-  C:2820H         LINE#         49
-  C:2826H         LINE#         50
+  C:27CFH         LINE#         43
+  C:27D6H         LINE#         44
+  C:27D6H         LINE#         45
+  C:27D8H         LINE#         46
+  C:27DEH         LINE#         47
+  C:27E6H         LINE#         48
+  C:27ECH         LINE#         49
+  C:27F2H         LINE#         50
   -------         ENDPROC       _FLASH_WRITEDATA
   -------         PROC          L?0030
   -------         ENDPROC       L?0030
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 18
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 18
 
 
   -------         PROC          _FLASH_WRITEARR
@@ -1029,16 +1029,16 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   -------         DO            
   X:000EH         SYMBOL        i
   -------         ENDDO         
-  C:246AH         LINE#         62
-  C:2485H         LINE#         63
-  C:2485H         LINE#         64
-  C:2488H         LINE#         66
-  C:248AH         LINE#         67
-  C:2498H         LINE#         68
-  C:2498H         LINE#         69
-  C:24BCH         LINE#         70
-  C:24C4H         LINE#         71
-  C:24C6H         LINE#         72
+  C:23F5H         LINE#         62
+  C:2410H         LINE#         63
+  C:2410H         LINE#         64
+  C:2413H         LINE#         66
+  C:2415H         LINE#         67
+  C:2423H         LINE#         68
+  C:2423H         LINE#         69
+  C:2447H         LINE#         70
+  C:244FH         LINE#         71
+  C:2451H         LINE#         72
   -------         ENDPROC       _FLASH_WRITEARR
   -------         PROC          _FLASH_READ_ADDR
   D:0082H         SYMBOL        address
@@ -1056,41 +1056,41 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   X:0008H         SYMBOL        fui_Address
   D:0005H         SYMBOL        fuc_Length
   X:000AH         SYMBOL        fucp_SaveArr
-  C:25D9H         LINE#         91
-  C:25EAH         LINE#         92
-  C:25EAH         LINE#         93
-  C:25F0H         LINE#         94
-  C:25F0H         LINE#         95
-  C:2616H         LINE#         96
-  C:2618H         LINE#         97
+  C:25A5H         LINE#         91
+  C:25B6H         LINE#         92
+  C:25B6H         LINE#         93
+  C:25BCH         LINE#         94
+  C:25BCH         LINE#         95
+  C:25E2H         LINE#         96
+  C:25E4H         LINE#         97
   -------         ENDPROC       _FLASH_READARR
   -------         PROC          CHECK_FLASH
   -------         DO            
   D:0005H         SYMBOL        i
   D:0004H         SYMBOL        cnt
   -------         ENDDO         
-  C:274EH         LINE#         99
-  C:274EH         LINE#         100
-  C:274EH         LINE#         101
-  C:2751H         LINE#         103
-  C:2751H         LINE#         104
-  C:2751H         LINE#         105
-  C:276AH         LINE#         106
-  C:276AH         LINE#         107
-  C:276BH         LINE#         108
-  C:276DH         LINE#         110
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 19
+  C:271AH         LINE#         99
+  C:271AH         LINE#         100
+  C:271AH         LINE#         101
+  C:271DH         LINE#         103
+  C:271DH         LINE#         104
+  C:271DH         LINE#         105
+  C:2736H         LINE#         106
+  C:2736H         LINE#         107
+  C:2737H         LINE#         108
+  C:2739H         LINE#         110
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 19
 
 
-  C:276DH         LINE#         111
-  C:2770H         LINE#         112
-  C:2770H         LINE#         113
-  C:2775H         LINE#         114
-  C:277BH         LINE#         115
-  C:277BH         LINE#         116
-  C:277EH         LINE#         117
-  C:277EH         LINE#         118
-  C:2780H         LINE#         119
+  C:2739H         LINE#         111
+  C:273CH         LINE#         112
+  C:273CH         LINE#         113
+  C:2741H         LINE#         114
+  C:2747H         LINE#         115
+  C:2747H         LINE#         116
+  C:274AH         LINE#         117
+  C:274AH         LINE#         118
+  C:274CH         LINE#         119
   -------         ENDPROC       CHECK_FLASH
   -------         PROC          FLASH_INIT
   -------         DO            
@@ -1130,16 +1130,16 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:1800H         LINE#         157
   -------         ENDPROC       FLASH_INIT
   -------         PROC          FLAH_SAVE_DATA
-  C:2852H         LINE#         161
-  C:2852H         LINE#         162
-  C:2852H         LINE#         164
-  C:2859H         LINE#         165
-  C:2866H         LINE#         166
-  C:2869H         LINE#         167
+  C:281EH         LINE#         161
+  C:281EH         LINE#         162
+  C:281EH         LINE#         164
+  C:2825H         LINE#         165
+  C:2832H         LINE#         166
+  C:2835H         LINE#         167
   -------         ENDPROC       FLAH_SAVE_DATA
   -------         ENDMOD        FLASH
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 20
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 20
 
 
   -------         MODULE        DELAY
@@ -1154,38 +1154,38 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   D:0088H         PUBLIC        TCON
   D:00B8H         PUBLIC        IE1
   D:00D8H         PUBLIC        IE2
-  C:29DCH         PUBLIC        _delay_ms
-  C:2A45H         PUBLIC        _delay_us
-  C:2AAFH         PUBLIC        _lcd_delay_us
+  C:29A8H         PUBLIC        _delay_ms
+  C:2A11H         PUBLIC        _delay_us
+  C:2A7BH         PUBLIC        _lcd_delay_us
   D:00D0H         PUBLIC        PSW
   -------         PROC          _DELAY_US
   D:0006H         SYMBOL        us
-  C:2A45H         LINE#         4
-  C:2A45H         LINE#         5
-  C:2A45H         LINE#         6
-  C:2A4EH         LINE#         7
-  C:2A4EH         LINE#         8
-  C:2A50H         LINE#         9
-  C:2A52H         LINE#         10
+  C:2A11H         LINE#         4
+  C:2A11H         LINE#         5
+  C:2A11H         LINE#         6
+  C:2A1AH         LINE#         7
+  C:2A1AH         LINE#         8
+  C:2A1CH         LINE#         9
+  C:2A1EH         LINE#         10
   -------         ENDPROC       _DELAY_US
   -------         PROC          _DELAY_MS
   D:0006H         SYMBOL        ms
   -------         DO            
   D:0004H         SYMBOL        i
   -------         ENDDO         
-  C:29DCH         LINE#         12
-  C:29DCH         LINE#         13
-  C:29DCH         LINE#         15
-  C:29DCH         LINE#         16
-  C:29E0H         LINE#         17
-  C:29E9H         LINE#         18
-  C:29F2H         LINE#         19
+  C:29A8H         LINE#         12
+  C:29A8H         LINE#         13
+  C:29A8H         LINE#         15
+  C:29A8H         LINE#         16
+  C:29ACH         LINE#         17
+  C:29B5H         LINE#         18
+  C:29BEH         LINE#         19
   -------         ENDPROC       _DELAY_MS
   -------         PROC          _LCD_DELAY_US
   D:0006H         SYMBOL        time
-  C:2AAFH         LINE#         21
-  C:2AAFH         LINE#         22
-  C:2AAFH         LINE#         23
+  C:2A7BH         LINE#         21
+  C:2A7BH         LINE#         22
+  C:2A7BH         LINE#         23
   -------         ENDPROC       _LCD_DELAY_US
   -------         ENDMOD        DELAY
 
@@ -1199,34 +1199,34 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   B:0090H.0       PUBLIC        P1_0
   B:0090H.1       PUBLIC        P1_1
   D:00F8H         PUBLIC        RSTFR
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 21
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 21
 
 
   B:0080H.6       PUBLIC        P0_6
   B:0080H.7       PUBLIC        P0_7
-  C:2658H         PUBLIC        _ht1621_sendbit_low
+  C:2624H         PUBLIC        _ht1621_sendbit_low
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:00B8H         PUBLIC        IE1
   D:00D8H         PUBLIC        IE2
-  C:298EH         PUBLIC        _ht1621_send_cmd
-  C:27AEH         PUBLIC        _ht1621_write_byte
-  C:2973H         PUBLIC        ht1621_init_pin
-  C:2619H         PUBLIC        _ht1621_sendbit_hight
-  C:2A86H         PUBLIC        release_ht1621b_pin
+  C:295AH         PUBLIC        _ht1621_send_cmd
+  C:277AH         PUBLIC        _ht1621_write_byte
+  C:293FH         PUBLIC        ht1621_init_pin
+  C:25E5H         PUBLIC        _ht1621_sendbit_hight
+  C:2A52H         PUBLIC        release_ht1621b_pin
   D:00D0H         PUBLIC        PSW
   -------         PROC          HT1621_INIT_PIN
-  C:2973H         LINE#         6
-  C:2973H         LINE#         7
-  C:2973H         LINE#         8
-  C:2979H         LINE#         9
-  C:297DH         LINE#         10
-  C:2981H         LINE#         11
-  C:2985H         LINE#         13
-  C:2987H         LINE#         14
-  C:2989H         LINE#         15
-  C:298BH         LINE#         16
-  C:298DH         LINE#         17
+  C:293FH         LINE#         6
+  C:293FH         LINE#         7
+  C:293FH         LINE#         8
+  C:2945H         LINE#         9
+  C:2949H         LINE#         10
+  C:294DH         LINE#         11
+  C:2951H         LINE#         13
+  C:2953H         LINE#         14
+  C:2955H         LINE#         15
+  C:2957H         LINE#         16
+  C:2959H         LINE#         17
   -------         ENDPROC       HT1621_INIT_PIN
   -------         PROC          _HT1621_SENDBIT_HIGHT
   X:0039H         SYMBOL        dat
@@ -1234,20 +1234,20 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   -------         DO            
   X:003BH         SYMBOL        i
   -------         ENDDO         
-  C:2619H         LINE#         20
-  C:2621H         LINE#         21
-  C:2621H         LINE#         22
-  C:2624H         LINE#         24
-  C:2630H         LINE#         25
-  C:2630H         LINE#         26
-  C:2632H         LINE#         27
-  C:2639H         LINE#         28
-  C:263DH         LINE#         30
-  C:263FH         LINE#         31
-  C:2641H         LINE#         32
-  C:2648H         LINE#         33
-  C:264FH         LINE#         34
-  C:2657H         LINE#         35
+  C:25E5H         LINE#         20
+  C:25EDH         LINE#         21
+  C:25EDH         LINE#         22
+  C:25F0H         LINE#         24
+  C:25FCH         LINE#         25
+  C:25FCH         LINE#         26
+  C:25FEH         LINE#         27
+  C:2605H         LINE#         28
+  C:2609H         LINE#         30
+  C:260BH         LINE#         31
+  C:260DH         LINE#         32
+  C:2614H         LINE#         33
+  C:261BH         LINE#         34
+  C:2623H         LINE#         35
   -------         ENDPROC       _HT1621_SENDBIT_HIGHT
   -------         PROC          _HT1621_SENDBIT_LOW
   X:0039H         SYMBOL        dat
@@ -1255,54 +1255,54 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   -------         DO            
   X:003BH         SYMBOL        i
   -------         ENDDO         
-  C:2658H         LINE#         37
-  C:2660H         LINE#         38
-  C:2660H         LINE#         39
-  C:2663H         LINE#         41
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 22
+  C:2624H         LINE#         37
+  C:262CH         LINE#         38
+  C:262CH         LINE#         39
+  C:262FH         LINE#         41
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 22
 
 
-  C:266FH         LINE#         42
-  C:266FH         LINE#         43
-  C:2671H         LINE#         44
-  C:2678H         LINE#         45
-  C:267CH         LINE#         47
-  C:267EH         LINE#         48
-  C:2680H         LINE#         49
-  C:2687H         LINE#         50
-  C:268EH         LINE#         51
-  C:2696H         LINE#         52
+  C:263BH         LINE#         42
+  C:263BH         LINE#         43
+  C:263DH         LINE#         44
+  C:2644H         LINE#         45
+  C:2648H         LINE#         47
+  C:264AH         LINE#         48
+  C:264CH         LINE#         49
+  C:2653H         LINE#         50
+  C:265AH         LINE#         51
+  C:2662H         LINE#         52
   -------         ENDPROC       _HT1621_SENDBIT_LOW
   -------         PROC          _HT1621_SEND_CMD
   X:0007H         SYMBOL        command
-  C:298EH         LINE#         55
-  C:2993H         LINE#         56
-  C:2993H         LINE#         57
-  C:2995H         LINE#         58
-  C:299CH         LINE#         59
-  C:29A6H         LINE#         60
-  C:29A8H         LINE#         61
+  C:295AH         LINE#         55
+  C:295FH         LINE#         56
+  C:295FH         LINE#         57
+  C:2961H         LINE#         58
+  C:2968H         LINE#         59
+  C:2972H         LINE#         60
+  C:2974H         LINE#         61
   -------         ENDPROC       _HT1621_SEND_CMD
   -------         PROC          _HT1621_WRITE_BYTE
   X:0037H         SYMBOL        addr
   X:0038H         SYMBOL        dat
-  C:27AEH         LINE#         63
-  C:27B6H         LINE#         64
-  C:27B6H         LINE#         65
-  C:27B8H         LINE#         66
-  C:27BFH         LINE#         67
-  C:27CDH         LINE#         68
-  C:27D7H         LINE#         69
-  C:27D9H         LINE#         70
+  C:277AH         LINE#         63
+  C:2782H         LINE#         64
+  C:2782H         LINE#         65
+  C:2784H         LINE#         66
+  C:278BH         LINE#         67
+  C:2799H         LINE#         68
+  C:27A3H         LINE#         69
+  C:27A5H         LINE#         70
   -------         ENDPROC       _HT1621_WRITE_BYTE
   -------         PROC          RELEASE_HT1621B_PIN
-  C:2A86H         LINE#         72
-  C:2A86H         LINE#         73
-  C:2A86H         LINE#         74
-  C:2A88H         LINE#         75
-  C:2A8AH         LINE#         76
-  C:2A8CH         LINE#         77
-  C:2A8EH         LINE#         78
+  C:2A52H         LINE#         72
+  C:2A52H         LINE#         73
+  C:2A52H         LINE#         74
+  C:2A54H         LINE#         75
+  C:2A56H         LINE#         76
+  C:2A58H         LINE#         77
+  C:2A5AH         LINE#         78
   -------         ENDPROC       RELEASE_HT1621B_PIN
   -------         ENDMOD        HT1621B
 
@@ -1313,82 +1313,82 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
   D:00A8H         PUBLIC        IE
-  C:2A53H         PUBLIC        lcd_turn_off_time
+  C:2A1FH         PUBLIC        lcd_turn_off_time
   D:00F8H         PUBLIC        RSTFR
-  C:291BH         PUBLIC        ht1621_all_display
+  C:28E7H         PUBLIC        ht1621_all_display
   X:00CEH         PUBLIC        Blink_std
   C:2257H         PUBLIC        _lcd_display_time
   X:00CFH         PUBLIC        cali_display_std
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 23
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 23
 
 
   C:1A55H         PUBLIC        _lcd_display_gap
-  C:2939H         PUBLIC        ht1621_all_clear
+  C:2905H         PUBLIC        ht1621_all_clear
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:282BH         PUBLIC        init_lcd_ht1621b
-  C:2AA6H         PUBLIC        lcd_ht1621b_off
+  C:27F7H         PUBLIC        init_lcd_ht1621b
+  C:2A72H         PUBLIC        lcd_ht1621b_off
   D:00B8H         PUBLIC        IE1
   D:00D8H         PUBLIC        IE2
-  C:2AA1H         PUBLIC        lcd_ht1621b_on
+  C:2A6DH         PUBLIC        lcd_ht1621b_on
   D:00D0H         PUBLIC        PSW
   -------         PROC          LCD_HT1621B_ON
-  C:2AA1H         LINE#         15
-  C:2AA1H         LINE#         16
-  C:2AA1H         LINE#         17
+  C:2A6DH         LINE#         15
+  C:2A6DH         LINE#         16
+  C:2A6DH         LINE#         17
   -------         ENDPROC       LCD_HT1621B_ON
   -------         PROC          LCD_HT1621B_OFF
-  C:2AA6H         LINE#         20
-  C:2AA6H         LINE#         21
-  C:2AA6H         LINE#         22
+  C:2A72H         LINE#         20
+  C:2A72H         LINE#         21
+  C:2A72H         LINE#         22
   -------         ENDPROC       LCD_HT1621B_OFF
   -------         PROC          HT1621_ALL_DISPLAY
   -------         DO            
   X:0000H         SYMBOL        i
   -------         ENDDO         
-  C:291BH         LINE#         25
-  C:291BH         LINE#         26
-  C:291BH         LINE#         27
-  C:2920H         LINE#         29
-  C:292BH         LINE#         30
-  C:292BH         LINE#         31
-  C:2930H         LINE#         32
-  C:2938H         LINE#         34
+  C:28E7H         LINE#         25
+  C:28E7H         LINE#         26
+  C:28E7H         LINE#         27
+  C:28ECH         LINE#         29
+  C:28F7H         LINE#         30
+  C:28F7H         LINE#         31
+  C:28FCH         LINE#         32
+  C:2904H         LINE#         34
   -------         ENDPROC       HT1621_ALL_DISPLAY
   -------         PROC          HT1621_ALL_CLEAR
   -------         DO            
   X:0036H         SYMBOL        i
   -------         ENDDO         
-  C:2939H         LINE#         36
-  C:2939H         LINE#         37
-  C:2939H         LINE#         38
-  C:293EH         LINE#         40
-  C:2949H         LINE#         41
-  C:2949H         LINE#         42
-  C:294EH         LINE#         43
-  C:2956H         LINE#         45
+  C:2905H         LINE#         36
+  C:2905H         LINE#         37
+  C:2905H         LINE#         38
+  C:290AH         LINE#         40
+  C:2915H         LINE#         41
+  C:2915H         LINE#         42
+  C:291AH         LINE#         43
+  C:2922H         LINE#         45
   -------         ENDPROC       HT1621_ALL_CLEAR
   -------         PROC          INIT_LCD_HT1621B
-  C:282BH         LINE#         47
-  C:282BH         LINE#         48
-  C:282BH         LINE#         49
-  C:282EH         LINE#         51
-  C:2833H         LINE#         52
-  C:2838H         LINE#         53
-  C:283DH         LINE#         54
-  C:2842H         LINE#         55
-  C:2847H         LINE#         56
-  C:284CH         LINE#         57
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 24
+  C:27F7H         LINE#         47
+  C:27F7H         LINE#         48
+  C:27F7H         LINE#         49
+  C:27FAH         LINE#         51
+  C:27FFH         LINE#         52
+  C:2804H         LINE#         53
+  C:2809H         LINE#         54
+  C:280EH         LINE#         55
+  C:2813H         LINE#         56
+  C:2818H         LINE#         57
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 24
 
 
-  C:284FH         LINE#         58
+  C:281BH         LINE#         58
   -------         ENDPROC       INIT_LCD_HT1621B
   -------         PROC          LCD_TURN_OFF_TIME
-  C:2A53H         LINE#         61
-  C:2A53H         LINE#         62
-  C:2A53H         LINE#         63
-  C:2A5AH         LINE#         64
+  C:2A1FH         LINE#         61
+  C:2A1FH         LINE#         62
+  C:2A1FH         LINE#         63
+  C:2A26H         LINE#         64
   -------         ENDPROC       LCD_TURN_OFF_TIME
   -------         PROC          _LCD_DISPLAY_TIME
   X:0006H         SYMBOL        time_type
@@ -1439,7 +1439,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:1A5AH         LINE#         152
   C:1A5FH         LINE#         153
   C:1A66H         LINE#         154
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 25
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 25
 
 
   C:1A6DH         LINE#         155
@@ -1499,7 +1499,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:1B10H         LINE#         210
   C:1B17H         LINE#         211
   C:1B1BH         LINE#         212
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 26
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 26
 
 
   C:1B1DH         LINE#         213
@@ -1526,15 +1526,15 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
-  C:258CH         PUBLIC        UART1_Rpt
+  C:2517H         PUBLIC        UART1_Rpt
   D:00A8H         PUBLIC        IE
-  C:28FCH         PUBLIC        _producte_send_cmd
+  C:28C8H         PUBLIC        _producte_send_cmd
   D:00F8H         PUBLIC        RSTFR
-  C:2781H         SYMBOL        _producte_com_send_data
+  C:274DH         SYMBOL        _producte_com_send_data
   B:0098H.1       PUBLIC        TI
   X:0066H         PUBLIC        usart_rx_cnt
   D:0099H         PUBLIC        SBUF
-  C:2A6EH         PUBLIC        _hal_uart_putchar
+  C:2A3AH         PUBLIC        _hal_uart_putchar
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   X:0067H         PUBLIC        temper_val
@@ -1543,48 +1543,48 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   B:00A8H.4       PUBLIC        ES1
   D:00CEH         PUBLIC        TH4
   D:00CDH         PUBLIC        TL4
-  C:27DAH         PUBLIC        uart_init
+  C:27A6H         PUBLIC        uart_init
   X:0068H         PUBLIC        usart_rx_buffer
-  C:2AB2H         SYMBOL        _producte_com_send_one_bit
+  C:2A7EH         SYMBOL        _producte_com_send_one_bit
   D:009EH         PUBLIC        SCON2
   D:00CCH         PUBLIC        T4CON
   X:0086H         PUBLIC        usart_rx_flag
   D:00D0H         PUBLIC        PSW
-  C:2A9BH         PUBLIC        _putchar
+  C:2A67H         PUBLIC        _putchar
   -------         PROC          UART_INIT
-  C:27DAH         LINE#         28
-  C:27DAH         LINE#         29
-  C:27DAH         LINE#         31
-  C:27E0H         LINE#         32
-  C:27E6H         LINE#         33
-  C:27ECH         LINE#         34
-  C:27F1H         LINE#         48
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 27
+  C:27A6H         LINE#         28
+  C:27A6H         LINE#         29
+  C:27A6H         LINE#         31
+  C:27ACH         LINE#         32
+  C:27B2H         LINE#         33
+  C:27B8H         LINE#         34
+  C:27BDH         LINE#         48
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 27
 
 
-  C:27F4H         LINE#         49
-  C:27F7H         LINE#         50
-  C:27FAH         LINE#         51
-  C:27FDH         LINE#         52
-  C:2800H         LINE#         53
-  C:2802H         LINE#         55
+  C:27C0H         LINE#         49
+  C:27C3H         LINE#         50
+  C:27C6H         LINE#         51
+  C:27C9H         LINE#         52
+  C:27CCH         LINE#         53
+  C:27CEH         LINE#         55
   -------         ENDPROC       UART_INIT
   -------         PROC          _HAL_UART_PUTCHAR
   D:0007H         SYMBOL        Char
-  C:2A6EH         LINE#         59
-  C:2A6EH         LINE#         60
-  C:2A6EH         LINE#         61
-  C:2A70H         LINE#         62
-  C:2A72H         LINE#         63
-  C:2A75H         LINE#         64
-  C:2A77H         LINE#         65
-  C:2A79H         LINE#         68
+  C:2A3AH         LINE#         59
+  C:2A3AH         LINE#         60
+  C:2A3AH         LINE#         61
+  C:2A3CH         LINE#         62
+  C:2A3EH         LINE#         63
+  C:2A41H         LINE#         64
+  C:2A43H         LINE#         65
+  C:2A45H         LINE#         68
   -------         ENDPROC       _HAL_UART_PUTCHAR
   -------         PROC          _PRODUCTE_COM_SEND_ONE_BIT
   D:0007H         SYMBOL        Data
-  C:2AB2H         LINE#         75
-  C:2AB2H         LINE#         76
-  C:2AB2H         LINE#         77
+  C:2A7EH         LINE#         75
+  C:2A7EH         LINE#         76
+  C:2A7EH         LINE#         77
   -------         ENDPROC       _PRODUCTE_COM_SEND_ONE_BIT
   -------         PROC          _PRODUCTE_COM_SEND_DATA
   X:000DH         SYMBOL        Data
@@ -1592,13 +1592,13 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   -------         DO            
   D:0006H         SYMBOL        i
   -------         ENDDO         
-  C:2781H         LINE#         84
-  C:278CH         LINE#         85
-  C:278CH         LINE#         87
-  C:2793H         LINE#         88
-  C:2793H         LINE#         89
-  C:27AAH         LINE#         90
-  C:27ADH         LINE#         91
+  C:274DH         LINE#         84
+  C:2758H         LINE#         85
+  C:2758H         LINE#         87
+  C:275FH         LINE#         88
+  C:275FH         LINE#         89
+  C:2776H         LINE#         90
+  C:2779H         LINE#         91
   -------         ENDPROC       _PRODUCTE_COM_SEND_DATA
   -------         PROC          _PRODUCTE_SEND_CMD
   D:0007H         SYMBOL        funcode
@@ -1606,53 +1606,53 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   -------         DO            
   X:0008H         SYMBOL        cmd_t
   -------         ENDDO         
-  C:28FCH         LINE#         98
-  C:28FCH         LINE#         99
-  C:28FCH         LINE#         101
-  C:2902H         LINE#         102
-  C:2905H         LINE#         103
-  C:2908H         LINE#         104
-  C:290CH         LINE#         105
-  C:2910H         LINE#         106
+  C:28C8H         LINE#         98
+  C:28C8H         LINE#         99
+  C:28C8H         LINE#         101
+  C:28CEH         LINE#         102
+  C:28D1H         LINE#         103
+  C:28D4H         LINE#         104
+  C:28D8H         LINE#         105
+  C:28DCH         LINE#         106
   -------         ENDPROC       _PRODUCTE_SEND_CMD
   -------         PROC          _PUTCHAR
   D:0006H         SYMBOL        c
-  C:2A9BH         LINE#         111
-  C:2A9DH         LINE#         112
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 28
+  C:2A67H         LINE#         111
+  C:2A69H         LINE#         112
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 28
 
 
-  C:2A9DH         LINE#         113
-  C:2AA0H         LINE#         114
-  C:2AA0H         LINE#         115
+  C:2A69H         LINE#         113
+  C:2A6CH         LINE#         114
+  C:2A6CH         LINE#         115
   -------         ENDPROC       _PUTCHAR
   -------         PROC          UART1_RPT
   -------         DO            
   D:0007H         SYMBOL        Data
   -------         ENDDO         
-  C:258CH         LINE#         118
-  C:2599H         LINE#         120
-  C:2599H         LINE#         121
-  C:259EH         LINE#         122
-  C:259EH         LINE#         123
-  C:25A0H         LINE#         125
-  C:25A3H         LINE#         127
-  C:25ADH         LINE#         128
-  C:25ADH         LINE#         129
-  C:25ADH         LINE#         130
-  C:25B1H         LINE#         131
-  C:25B1H         LINE#         132
-  C:25B5H         LINE#         133
-  C:25BBH         LINE#         135
-  C:25C1H         LINE#         139
-  C:25C1H         LINE#         140
-  C:25C3H         LINE#         141
-  C:25C3H         LINE#         143
-  C:25C8H         LINE#         145
-  C:25CEH         LINE#         147
-  C:25CEH         LINE#         149
-  C:25CEH         LINE#         152
-  C:25CEH         LINE#         153
+  C:2517H         LINE#         118
+  C:2524H         LINE#         120
+  C:2524H         LINE#         121
+  C:2529H         LINE#         122
+  C:2529H         LINE#         123
+  C:252BH         LINE#         125
+  C:252EH         LINE#         127
+  C:2538H         LINE#         128
+  C:2538H         LINE#         129
+  C:2538H         LINE#         130
+  C:253CH         LINE#         131
+  C:253CH         LINE#         132
+  C:2540H         LINE#         133
+  C:2546H         LINE#         135
+  C:254CH         LINE#         139
+  C:254CH         LINE#         140
+  C:254EH         LINE#         141
+  C:254EH         LINE#         143
+  C:2553H         LINE#         145
+  C:2559H         LINE#         147
+  C:2559H         LINE#         149
+  C:2559H         LINE#         152
+  C:2559H         LINE#         153
   -------         ENDPROC       UART1_RPT
   -------         ENDMOD        UART
 
@@ -1679,7 +1679,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   D:00D0H         PUBLIC        PSW
   -------         PROC          KEY_INIT
   C:000EH         LINE#         7
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 29
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 29
 
 
   C:000EH         LINE#         8
@@ -1739,7 +1739,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:1F3CH         LINE#         68
   C:1F43H         LINE#         69
   C:1F43H         LINE#         70
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 30
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 30
 
 
   C:1F43H         LINE#         71
@@ -1799,7 +1799,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:1FF1H         LINE#         131
   C:1FF3H         LINE#         133
   C:1FF3H         LINE#         134
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 31
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 31
 
 
   C:1FFAH         LINE#         135
@@ -1859,25 +1859,25 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 32
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 32
 
 
-  C:2535H         SYMBOL        set_correct_Value
+  C:24C0H         SYMBOL        set_correct_Value
   B:00A8H.7       PUBLIC        EA
   X:00A0H         PUBLIC        correct_time
   X:00A2H         PUBLIC        over_rang_time_std
   D:00A8H         PUBLIC        IE
   D:00F8H         PUBLIC        RSTFR
-  C:26D5H         PUBLIC        _Heat_Operation
-  C:24CBH         PUBLIC        time_Print
-  C:2957H         PUBLIC        _set_time_sec_val
+  C:26A1H         PUBLIC        _Heat_Operation
+  C:2456H         PUBLIC        time_Print
+  C:2923H         PUBLIC        _set_time_sec_val
   X:00A3H         PUBLIC        Gap_protect_std
   D:0098H         PUBLIC        SCON
   D:0089H         PUBLIC        TMOD
   D:0088H         PUBLIC        TCON
   X:00A4H         PUBLIC        time_heat
-  C:2697H         PUBLIC        _Controll_Heat
-  C:23E9H         PUBLIC        _set_correct_time
+  C:2663H         PUBLIC        _Controll_Heat
+  C:2564H         PUBLIC        _set_correct_time
   D:00B8H         PUBLIC        IE1
   D:00D8H         PUBLIC        IE2
   X:00A6H         PUBLIC        Heat_start_std
@@ -1896,152 +1896,137 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   X:00B0H         PUBLIC        cnt_heat_time
   X:00B2H         PUBLIC        exti_cail_cnt
   X:00B4H         PUBLIC        On_stay
-  C:2712H         SYMBOL        set_heat_val
-  C:29F3H         PUBLIC        time0_init
+  C:26DEH         SYMBOL        set_heat_val
+  C:29BFH         PUBLIC        time0_init
   D:00D0H         PUBLIC        PSW
   C:22E1H         PUBLIC        set_time_sec
   -------         PROC          _CONTROLL_HEAT
   X:0006H         SYMBOL        temp_set
   X:0008H         SYMBOL        temp_now
-  C:2697H         LINE#         24
-  C:26A5H         LINE#         25
-  C:26A5H         LINE#         27
-  C:26ABH         LINE#         28
-  C:26ABH         LINE#         30
-  C:26ADH         LINE#         31
-  C:26AFH         LINE#         32
-  C:26CFH         LINE#         33
-  C:26CFH         LINE#         35
-  C:26D4H         LINE#         36
-  C:26D4H         LINE#         37
+  C:2663H         LINE#         24
+  C:2671H         LINE#         25
+  C:2671H         LINE#         27
+  C:2677H         LINE#         28
+  C:2677H         LINE#         30
+  C:2679H         LINE#         31
+  C:267BH         LINE#         32
+  C:269BH         LINE#         33
+  C:269BH         LINE#         35
+  C:26A0H         LINE#         36
+  C:26A0H         LINE#         37
   -------         ENDPROC       _CONTROLL_HEAT
   -------         PROC          _HEAT_OPERATION
   D:0006H         SYMBOL        temp
-  C:26D5H         LINE#         42
-  C:26D5H         LINE#         43
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 33
+  C:26A1H         LINE#         42
+  C:26A1H         LINE#         43
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 33
 
 
-  C:26D5H         LINE#         44
-  C:26DBH         LINE#         45
-  C:26DBH         LINE#         46
-  C:26E9H         LINE#         47
-  C:26F6H         LINE#         48
-  C:26F6H         LINE#         49
-  C:26F8H         LINE#         51
-  C:26FAH         LINE#         53
-  C:26FAH         LINE#         54
-  C:26FFH         LINE#         56
-  C:26FFH         LINE#         57
-  C:270BH         LINE#         58
-  C:270BH         LINE#         59
-  C:2711H         LINE#         60
-  C:2711H         LINE#         61
-  C:2711H         LINE#         62
+  C:26A1H         LINE#         44
+  C:26A7H         LINE#         45
+  C:26A7H         LINE#         46
+  C:26B5H         LINE#         47
+  C:26C2H         LINE#         48
+  C:26C2H         LINE#         49
+  C:26C4H         LINE#         51
+  C:26C6H         LINE#         53
+  C:26C6H         LINE#         54
+  C:26CBH         LINE#         56
+  C:26CBH         LINE#         57
+  C:26D7H         LINE#         58
+  C:26D7H         LINE#         59
+  C:26DDH         LINE#         60
+  C:26DDH         LINE#         61
+  C:26DDH         LINE#         62
   -------         ENDPROC       _HEAT_OPERATION
   -------         PROC          _SET_TIME_SEC_VAL
   D:0006H         SYMBOL        sec
-  C:2957H         LINE#         65
-  C:2957H         LINE#         66
-  C:2957H         LINE#         67
-  C:295FH         LINE#         68
-  C:2962H         LINE#         69
+  C:2923H         LINE#         65
+  C:2923H         LINE#         66
+  C:2923H         LINE#         67
+  C:292BH         LINE#         68
+  C:292EH         LINE#         69
   -------         ENDPROC       _SET_TIME_SEC_VAL
   -------         PROC          _SET_CORRECT_TIME
   D:0007H         SYMBOL        gap
-  C:23E9H         LINE#         71
-  C:23E9H         LINE#         72
-  C:23E9H         LINE#         74
-  C:2414H         LINE#         75
-  C:2414H         LINE#         76
-  C:2414H         LINE#         77
-  C:241DH         LINE#         78
-  C:241EH         LINE#         79
-  C:241EH         LINE#         80
-  C:241EH         LINE#         81
-  C:2420H         LINE#         82
-  C:2420H         LINE#         83
-  C:2420H         LINE#         84
-  C:2422H         LINE#         85
-  C:2422H         LINE#         86
-  C:242BH         LINE#         87
-  C:242CH         LINE#         88
-  C:242CH         LINE#         89
-  C:2435H         LINE#         90
-  C:2436H         LINE#         91
-  C:2436H         LINE#         92
-  C:243FH         LINE#         93
-  C:2440H         LINE#         94
-  C:2440H         LINE#         95
-  C:2449H         LINE#         96
-  C:244AH         LINE#         97
-  C:244AH         LINE#         98
-  C:2453H         LINE#         99
-  C:2454H         LINE#         100
-  C:2454H         LINE#         101
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 34
-
-
-  C:2454H         LINE#         102
-  C:2454H         LINE#         103
-  C:245DH         LINE#         105
-  C:245DH         LINE#         107
-  C:245DH         LINE#         108
+  C:2564H         LINE#         71
+  C:2564H         LINE#         72
+  C:2564H         LINE#         74
+  C:258FH         LINE#         75
+  C:258FH         LINE#         76
+  C:258FH         LINE#         77
+  C:258FH         LINE#         78
+  C:2591H         LINE#         79
+  C:2591H         LINE#         82
+  C:2591H         LINE#         85
+  C:2591H         LINE#         88
+  C:2591H         LINE#         91
+  C:2591H         LINE#         94
+  C:2591H         LINE#         97
+  C:2591H         LINE#         98
+  C:2591H         LINE#         99
+  C:2591H         LINE#         100
+  C:259AH         LINE#         102
+  C:259BH         LINE#         103
+  C:259BH         LINE#         104
+  C:25A4H         LINE#         105
+  C:25A4H         LINE#         107
+  C:25A4H         LINE#         108
   -------         ENDPROC       _SET_CORRECT_TIME
   -------         PROC          SET_CORRECT_VALUE
-  C:2535H         LINE#         109
-  C:2535H         LINE#         110
-  C:2535H         LINE#         111
-  C:2563H         LINE#         112
-  C:2563H         LINE#         113
-  C:2563H         LINE#         114
-  C:2563H         LINE#         115
-  C:2565H         LINE#         116
-  C:2565H         LINE#         117
-  C:256BH         LINE#         118
-  C:256CH         LINE#         119
-  C:256CH         LINE#         120
-  C:256CH         LINE#         121
-  C:256EH         LINE#         122
-  C:256EH         LINE#         123
-  C:2574H         LINE#         124
-  C:2575H         LINE#         125
-  C:2575H         LINE#         126
-  C:2575H         LINE#         127
-  C:2577H         LINE#         128
-  C:2577H         LINE#         129
-  C:257DH         LINE#         130
-  C:257EH         LINE#         131
-  C:257EH         LINE#         132
-  C:2584H         LINE#         133
-  C:2585H         LINE#         134
-  C:2585H         LINE#         137
-  C:2585H         LINE#         138
-  C:2585H         LINE#         139
-  C:2585H         LINE#         140
-  C:258BH         LINE#         142
-  C:258BH         LINE#         145
-  C:258BH         LINE#         147
+  C:24C0H         LINE#         109
+  C:24C0H         LINE#         110
+  C:24C0H         LINE#         111
+  C:24EEH         LINE#         112
+  C:24EEH         LINE#         113
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 34
+
+
+  C:24EEH         LINE#         114
+  C:24EEH         LINE#         115
+  C:24F0H         LINE#         116
+  C:24F0H         LINE#         117
+  C:24F6H         LINE#         118
+  C:24F7H         LINE#         119
+  C:24F7H         LINE#         120
+  C:24F7H         LINE#         121
+  C:24F9H         LINE#         122
+  C:24F9H         LINE#         123
+  C:24FFH         LINE#         124
+  C:2500H         LINE#         125
+  C:2500H         LINE#         126
+  C:2500H         LINE#         127
+  C:2502H         LINE#         128
+  C:2502H         LINE#         129
+  C:2508H         LINE#         130
+  C:2509H         LINE#         131
+  C:2509H         LINE#         132
+  C:250FH         LINE#         133
+  C:2510H         LINE#         134
+  C:2510H         LINE#         137
+  C:2510H         LINE#         138
+  C:2510H         LINE#         139
+  C:2510H         LINE#         140
+  C:2516H         LINE#         142
+  C:2516H         LINE#         145
+  C:2516H         LINE#         147
   -------         ENDPROC       SET_CORRECT_VALUE
   -------         PROC          SET_HEAT_VAL
-  C:2712H         LINE#         148
-  C:2712H         LINE#         149
-  C:2712H         LINE#         150
-  C:2719H         LINE#         151
-  C:2719H         LINE#         154
-  C:2732H         LINE#         155
-  C:2732H         LINE#         156
-  C:273BH         LINE#         157
-  C:2740H         LINE#         158
-  C:2746H         LINE#         159
-  C:274AH         LINE#         161
-  C:274DH         LINE#         162
-  C:274DH         LINE#         163
-  C:274DH         LINE#         164
+  C:26DEH         LINE#         148
+  C:26DEH         LINE#         149
+  C:26DEH         LINE#         150
+  C:26E5H         LINE#         151
+  C:26E5H         LINE#         154
+  C:26FEH         LINE#         155
+  C:26FEH         LINE#         156
+  C:2707H         LINE#         157
+  C:270CH         LINE#         158
+  C:2712H         LINE#         159
+  C:2716H         LINE#         161
+  C:2719H         LINE#         162
+  C:2719H         LINE#         163
+  C:2719H         LINE#         164
   -------         ENDPROC       SET_HEAT_VAL
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 35
-
-
   -------         PROC          SET_TIME_SEC
   C:22E1H         LINE#         166
   C:22E1H         LINE#         167
@@ -2054,6 +2039,9 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:22F3H         LINE#         174
   C:22F5H         LINE#         175
   C:22F9H         LINE#         176
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 35
+
+
   C:22F9H         LINE#         177
   C:2302H         LINE#         178
   C:2303H         LINE#         179
@@ -2085,23 +2073,20 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:2353H         LINE#         205
   -------         ENDPROC       SET_TIME_SEC
   -------         PROC          TIME0_INIT
-  C:29F3H         LINE#         209
-  C:29F3H         LINE#         210
-  C:29F3H         LINE#         212
-  C:29F8H         LINE#         213
-  C:29FAH         LINE#         221
-  C:29FDH         LINE#         222
-  C:2A00H         LINE#         223
-  C:2A02H         LINE#         224
-  C:2A04H         LINE#         225
-  C:2A06H         LINE#         226
-  C:2A08H         LINE#         227
+  C:29BFH         LINE#         209
+  C:29BFH         LINE#         210
+  C:29BFH         LINE#         212
+  C:29C4H         LINE#         213
+  C:29C6H         LINE#         221
+  C:29C9H         LINE#         222
+  C:29CCH         LINE#         223
+  C:29CEH         LINE#         224
+  C:29D0H         LINE#         225
+  C:29D2H         LINE#         226
+  C:29D4H         LINE#         227
   -------         ENDPROC       TIME0_INIT
   -------         PROC          TIMER0_RPT
   C:15A1H         LINE#         232
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 36
-
-
   C:15BEH         LINE#         234
   C:15C7H         LINE#         235
   C:15C7H         LINE#         236
@@ -2114,6 +2099,9 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:15EEH         LINE#         244
   C:15FDH         LINE#         245
   C:15FDH         LINE#         246
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 36
+
+
   C:1602H         LINE#         247
   C:1608H         LINE#         248
   C:160DH         LINE#         250
@@ -2159,36 +2147,36 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:16C9H         LINE#         297
   C:16C9H         LINE#         298
   -------         ENDPROC       TIMER0_RPT
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 37
-
-
   -------         PROC          TIME_PRINT
-  C:24CBH         LINE#         300
-  C:24CBH         LINE#         301
-  C:24CBH         LINE#         302
-  C:24F5H         LINE#         303
-  C:24F5H         LINE#         304
-  C:24F5H         LINE#         305
-  C:24FBH         LINE#         306
-  C:24FBH         LINE#         307
-  C:24FDH         LINE#         308
-  C:24FDH         LINE#         309
-  C:2503H         LINE#         310
-  C:2503H         LINE#         311
-  C:2505H         LINE#         312
-  C:2505H         LINE#         313
-  C:250BH         LINE#         314
-  C:250BH         LINE#         315
-  C:250DH         LINE#         316
-  C:250DH         LINE#         317
-  C:2513H         LINE#         318
-  C:2513H         LINE#         319
-  C:2515H         LINE#         320
-  C:2515H         LINE#         321
-  C:252DH         LINE#         322
-  C:2534H         LINE#         323
-  C:2534H         LINE#         324
-  C:2534H         LINE#         325
+  C:2456H         LINE#         300
+  C:2456H         LINE#         301
+  C:2456H         LINE#         302
+  C:2480H         LINE#         303
+  C:2480H         LINE#         304
+  C:2480H         LINE#         305
+  C:2486H         LINE#         306
+  C:2486H         LINE#         307
+  C:2488H         LINE#         308
+  C:2488H         LINE#         309
+  C:248EH         LINE#         310
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 37
+
+
+  C:248EH         LINE#         311
+  C:2490H         LINE#         312
+  C:2490H         LINE#         313
+  C:2496H         LINE#         314
+  C:2496H         LINE#         315
+  C:2498H         LINE#         316
+  C:2498H         LINE#         317
+  C:249EH         LINE#         318
+  C:249EH         LINE#         319
+  C:24A0H         LINE#         320
+  C:24A0H         LINE#         321
+  C:24B8H         LINE#         322
+  C:24BFH         LINE#         323
+  C:24BFH         LINE#         324
+  C:24BFH         LINE#         325
   -------         ENDPROC       TIME_PRINT
   -------         ENDMOD        TIMER
 
@@ -2198,7 +2186,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
-  C:29C4H         PUBLIC        _set_pwm
+  C:2990H         PUBLIC        _set_pwm
   D:00A8H         PUBLIC        IE
   D:00F8H         PUBLIC        RSTFR
   D:0098H         PUBLIC        SCON
@@ -2207,7 +2195,7 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   D:00B8H         PUBLIC        IE1
   D:00D8H         PUBLIC        IE2
   D:00DDH         PUBLIC        PWM3C
-  C:289AH         PUBLIC        _pwm_init
+  C:2866H         PUBLIC        _pwm_init
   D:00DFH         PUBLIC        PWM3D
   D:00DEH         PUBLIC        PWM3P
   D:00D0H         PUBLIC        PSW
@@ -2216,25 +2204,25 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   -------         DO            
   D:0004H         SYMBOL        tep
   -------         ENDDO         
-  C:29C4H         LINE#         4
-  C:29C4H         LINE#         5
-  C:29C4H         LINE#         6
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 38
-
-
-  C:29D9H         LINE#         7
-  C:29DBH         LINE#         8
+  C:2990H         LINE#         4
+  C:2990H         LINE#         5
+  C:2990H         LINE#         6
+  C:29A5H         LINE#         7
+  C:29A7H         LINE#         8
   -------         ENDPROC       _SET_PWM
   -------         PROC          _PWM_INIT
   D:0006H         SYMBOL        hz
-  C:289AH         LINE#         10
-  C:289AH         LINE#         11
-  C:289AH         LINE#         12
-  C:28A0H         LINE#         13
-  C:28A5H         LINE#         21
-  C:28B6H         LINE#         22
-  C:28B8H         LINE#         24
-  C:28BBH         LINE#         25
+  C:2866H         LINE#         10
+  C:2866H         LINE#         11
+  C:2866H         LINE#         12
+  C:286CH         LINE#         13
+  C:2871H         LINE#         21
+  C:2882H         LINE#         22
+  C:2884H         LINE#         24
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 38
+
+
+  C:2887H         LINE#         25
   -------         ENDPROC       _PWM_INIT
   -------         ENDMOD        PWM
 
@@ -2248,58 +2236,58 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   D:00F8H         PUBLIC        RSTFR
   C:1823H         PUBLIC        _get_voltage
   D:00B6H         PUBLIC        ADCR
-  C:2A1FH         PUBLIC        get_adc_val_ch
+  C:29EBH         PUBLIC        get_adc_val_ch
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:00B4H         PUBLIC        ADCC0
   D:00B5H         PUBLIC        ADCC1
   D:00B8H         PUBLIC        IE1
-  C:29A9H         PUBLIC        adc_init
+  C:2975H         PUBLIC        adc_init
   D:00D8H         PUBLIC        IE2
-  C:2A09H         PUBLIC        get_adc_val
+  C:29D5H         PUBLIC        get_adc_val
   D:00D0H         PUBLIC        PSW
   -------         PROC          ADC_INIT
-  C:29A9H         LINE#         5
-  C:29A9H         LINE#         6
-  C:29A9H         LINE#         7
-  C:29AFH         LINE#         8
-  C:29B3H         LINE#         9
-  C:29B6H         LINE#         17
-  C:29BDH         LINE#         20
-  C:29C3H         LINE#         21
+  C:2975H         LINE#         5
+  C:2975H         LINE#         6
+  C:2975H         LINE#         7
+  C:297BH         LINE#         8
+  C:297FH         LINE#         9
+  C:2982H         LINE#         17
+  C:2989H         LINE#         20
+  C:298FH         LINE#         21
   -------         ENDPROC       ADC_INIT
   -------         PROC          GET_ADC_VAL
   -------         DO            
   D:0006H         SYMBOL        adc_val
   -------         ENDDO         
-  C:2A09H         LINE#         23
-  C:2A09H         LINE#         24
-  C:2A09H         LINE#         25
-  C:2A0CH         LINE#         26
-  C:2A0FH         LINE#         28
-  C:2A12H         LINE#         29
-  C:2A17H         LINE#         30
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 39
-
-
-  C:2A1AH         LINE#         31
-  C:2A1EH         LINE#         35
-  C:2A1EH         LINE#         36
+  C:29D5H         LINE#         23
+  C:29D5H         LINE#         24
+  C:29D5H         LINE#         25
+  C:29D8H         LINE#         26
+  C:29DBH         LINE#         28
+  C:29DEH         LINE#         29
+  C:29E3H         LINE#         30
+  C:29E6H         LINE#         31
+  C:29EAH         LINE#         35
+  C:29EAH         LINE#         36
   -------         ENDPROC       GET_ADC_VAL
   -------         PROC          GET_ADC_VAL_CH
   -------         DO            
   D:0006H         SYMBOL        adc_val_ch
   -------         ENDDO         
-  C:2A1FH         LINE#         38
-  C:2A1FH         LINE#         39
-  C:2A1FH         LINE#         40
-  C:2A22H         LINE#         41
-  C:2A25H         LINE#         43
-  C:2A28H         LINE#         44
-  C:2A2DH         LINE#         45
-  C:2A30H         LINE#         46
-  C:2A34H         LINE#         49
-  C:2A34H         LINE#         50
+  C:29EBH         LINE#         38
+  C:29EBH         LINE#         39
+  C:29EBH         LINE#         40
+  C:29EEH         LINE#         41
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 39
+
+
+  C:29F1H         LINE#         43
+  C:29F4H         LINE#         44
+  C:29F9H         LINE#         45
+  C:29FCH         LINE#         46
+  C:2A00H         LINE#         49
+  C:2A00H         LINE#         50
   -------         ENDPROC       GET_ADC_VAL_CH
   -------         PROC          _GET_VOLTAGE
   X:0006H         SYMBOL        u1_voltage
@@ -2339,27 +2327,27 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   D:00BDH         PUBLIC        WDTC
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 40
-
-
-  C:2AABH         PUBLIC        clear_wdt
+  C:2A77H         PUBLIC        clear_wdt
   D:00B8H         PUBLIC        IE1
   D:00D8H         PUBLIC        IE2
-  C:2A61H         PUBLIC        _wdt_init
+  C:2A2DH         PUBLIC        _wdt_init
   D:00D0H         PUBLIC        PSW
   -------         PROC          _WDT_INIT
   D:0007H         SYMBOL        time
-  C:2A61H         LINE#         4
-  C:2A61H         LINE#         5
-  C:2A61H         LINE#         6
-  C:2A64H         LINE#         12
-  C:2A6DH         LINE#         14
+  C:2A2DH         LINE#         4
+  C:2A2DH         LINE#         5
+  C:2A2DH         LINE#         6
+  C:2A30H         LINE#         12
+  C:2A39H         LINE#         14
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 40
+
+
   -------         ENDPROC       _WDT_INIT
   -------         PROC          CLEAR_WDT
-  C:2AABH         LINE#         16
-  C:2AABH         LINE#         17
-  C:2AABH         LINE#         18
-  C:2AAEH         LINE#         19
+  C:2A77H         LINE#         16
+  C:2A77H         LINE#         17
+  C:2A77H         LINE#         18
+  C:2A7AH         LINE#         19
   -------         ENDPROC       CLEAR_WDT
   -------         ENDMOD        WDT
 
@@ -2376,21 +2364,21 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   D:0088H         PUBLIC        TCON
   D:00B8H         PUBLIC        IE1
   D:00D8H         PUBLIC        IE2
-  C:2A7AH         SYMBOL        _?ix1000
-  C:28DCH         PUBLIC        PID_Init
+  C:2A46H         SYMBOL        _?ix1000
+  C:28A8H         PUBLIC        PID_Init
   X:009FH         PUBLIC        PID_RunFlag
   C:0E13H         PUBLIC        PID_Operation
   D:00D0H         PUBLIC        PSW
   -------         PROC          PID_INIT
-  C:28DCH         LINE#         14
-  C:28DCH         LINE#         15
-  C:28DCH         LINE#         16
-  C:28E3H         LINE#         17
-  C:28E9H         LINE#         18
-  C:28EDH         LINE#         20
-  C:28F2H         LINE#         21
-  C:28F6H         LINE#         22
-  C:28FBH         LINE#         23
+  C:28A8H         LINE#         14
+  C:28A8H         LINE#         15
+  C:28A8H         LINE#         16
+  C:28AFH         LINE#         17
+  C:28B5H         LINE#         18
+  C:28B9H         LINE#         20
+  C:28BEH         LINE#         21
+  C:28C2H         LINE#         22
+  C:28C7H         LINE#         23
   -------         ENDPROC       PID_INIT
   -------         PROC          PID_OPERATION
   -------         DO            
@@ -2399,9 +2387,6 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   X:0016H         SYMBOL        NegSum
   -------         ENDDO         
   C:0E13H         LINE#         33
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 41
-
-
   C:0E13H         LINE#         34
   C:0E13H         LINE#         35
   C:0E26H         LINE#         36
@@ -2414,6 +2399,9 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:0E62H         LINE#         43
   C:0E65H         LINE#         45
   C:0E65H         LINE#         46
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 41
+
+
   C:0E6EH         LINE#         47
   C:0E73H         LINE#         49
   C:0E85H         LINE#         50
@@ -2459,9 +2447,6 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:1156H         LINE#         102
   C:1184H         LINE#         103
   C:1184H         LINE#         105
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 42
-
-
   C:11AFH         LINE#         106
   C:11D1H         LINE#         107
   C:11D1H         LINE#         108
@@ -2474,6 +2459,9 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:1232H         LINE#         116
   C:1232H         LINE#         117
   C:1233H         LINE#         126
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 42
+
+
   C:1233H         LINE#         127
   C:123AH         LINE#         128
   C:123AH         LINE#         129
@@ -2519,9 +2507,6 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   C:0402H         PUBLIC        ?C?FPCONVERT
   -------         ENDMOD        ?C?FPCONVERT
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 43
-
-
   -------         MODULE        ?C?FTNPWR
   C:0537H         PUBLIC        ?C?FTNPWR
   -------         ENDMOD        ?C?FTNPWR
@@ -2533,6 +2518,9 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   -------         MODULE        ?C?CLDPTR
   C:066DH         PUBLIC        ?C?CLDPTR
   -------         ENDMOD        ?C?CLDPTR
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 43
+
 
   -------         MODULE        ?C?CLDOPTR
   C:0686H         PUBLIC        ?C?CLDOPTR
@@ -2579,9 +2567,6 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   -------         ENDMOD        ?C?ULCMP
 
   -------         MODULE        ?C?LSTXDATA
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 44
-
-
   C:08B3H         PUBLIC        ?C?LSTXDATA
   -------         ENDMOD        ?C?LSTXDATA
 
@@ -2594,6 +2579,9 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
   -------         ENDMOD        ?C?PLDIXDATA
 
   -------         MODULE        ?C?PSTXDATA
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 44
+
+
   C:0907H         PUBLIC        ?C?PSTXDATA
   -------         ENDMOD        ?C?PSTXDATA
 
@@ -2639,9 +2627,6 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
     SEGMENT: ?PR?HT1621_ALL_CLEAR?LCD_DISPLAY
     CALLER1: ?C_C51STARTUP
     CALLER2: ?PR?TIMER0_RPT?TIMER
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/04/2020  11:37:42  PAGE 45
-
-
 
 *** WARNING L15: MULTIPLE CALL TO SEGMENT
     SEGMENT: ?PR?_HT1621_WRITE_BYTE?HT1621B
@@ -2654,9 +2639,12 @@ SYMBOL TABLE OF MODULE:  .\output\K9029 (?C_STARTUP)
     CALLER2: ?PR?TIMER0_RPT?TIMER
 
 *** WARNING L15: MULTIPLE CALL TO SEGMENT
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/07/2020  10:03:38  PAGE 45
+
+
     SEGMENT: ?PR?_HT1621_SENDBIT_LOW?HT1621B
     CALLER1: ?C_C51STARTUP
     CALLER2: ?PR?TIMER0_RPT?TIMER
 
-Program Size: data=21.2 xdata=270 code=10931
+Program Size: data=21.2 xdata=270 code=10879
 LINK/LOCATE RUN COMPLETE.  12 WARNING(S),  0 ERROR(S)

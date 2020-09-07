@@ -1,4 +1,4 @@
-C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 11:37:41 PAGE 1   
+C51 COMPILER V9.56.0.0   MAIN                                                              09/07/2020 10:03:37 PAGE 1   
 
 
 C51 COMPILER V9.56.0.0, COMPILATION OF MODULE MAIN
@@ -62,7 +62,7 @@ line level    source
   50   2          {
   51   3      
   52   3            set_device_state ( OFF );
-C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 11:37:41 PAGE 2   
+C51 COMPILER V9.56.0.0   MAIN                                                              09/07/2020 10:03:37 PAGE 2   
 
   53   3            ht1621_all_clear();
   54   3            set_pwm ( 0 );
@@ -126,7 +126,7 @@ line level    source
  112   4            }
  113   3            else
  114   3            {
-C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 11:37:41 PAGE 3   
+C51 COMPILER V9.56.0.0   MAIN                                                              09/07/2020 10:03:37 PAGE 3   
 
  115   4              flash_info.timer = TIMER_ON;
  116   4            }
@@ -190,7 +190,7 @@ line level    source
  174          {
  175   1        u8 i = 0;
  176   1        u8 basi_tmp = 50;
-C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 11:37:41 PAGE 4   
+C51 COMPILER V9.56.0.0   MAIN                                                              09/07/2020 10:03:37 PAGE 4   
 
  177   1        u8 k = 10;
  178   1        float u1 = 0;
@@ -254,7 +254,7 @@ line level    source
  236          
  237          
  238          
-C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 11:37:41 PAGE 5   
+C51 COMPILER V9.56.0.0   MAIN                                                              09/07/2020 10:03:37 PAGE 5   
 
  239          void temperature_handle ( void )
  240          {
@@ -284,7 +284,7 @@ line level    source
  264   5                if ( temp > 50 )
  265   5                {
  266   6                  Heat_start_std = 2;
- 267   6                  Open_Heat_Value = corrected_value_GAP_9_temp  ;
+ 267   6                  Open_Heat_Value = corrected_value_GAP_6_temp  ;
  268   6                }
  269   5                else
  270   5                {
@@ -305,7 +305,7 @@ line level    source
  285   5              }
  286   4              lcd_display_time ( flash_info.timer );
  287   4              lcd_display_gap ( flash_info.gap );
- 288   4              
+ 288   4      
  289   4            }
  290   3            else
  291   3            {
@@ -317,13 +317,13 @@ line level    source
  297   5                cali_display_std = 1;
  298   5              }
  299   4              else
- 300   4              { 
-C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 11:37:41 PAGE 6   
+ 300   4              {
+C51 COMPILER V9.56.0.0   MAIN                                                              09/07/2020 10:03:37 PAGE 6   
 
- 301   5              set_pwm ( 0 );
- 302   5              ht1621_send_cmd ( LCD_OFF );
+ 301   5                set_pwm ( 0 );
+ 302   5                ht1621_send_cmd ( LCD_OFF );
  303   5                cali_display_std = 0;
- 304   5              } 
+ 304   5              }
  305   4            }
  306   3            fault_std = 0;
  307   3          }
@@ -382,7 +382,7 @@ line level    source
  360          
  361          
  362          
-C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 11:37:41 PAGE 7   
+C51 COMPILER V9.56.0.0   MAIN                                                              09/07/2020 10:03:37 PAGE 7   
 
  363          void Set_Temp ( u8 gap )
  364          {
@@ -446,7 +446,7 @@ MODULE INFORMATION:   STATIC OVERLAYABLE
    CODE SIZE        =   1657    ----
    CONSTANT SIZE    =    142    ----
    XDATA SIZE       =      5      20
-C51 COMPILER V9.56.0.0   MAIN                                                              09/04/2020 11:37:41 PAGE 8   
+C51 COMPILER V9.56.0.0   MAIN                                                              09/07/2020 10:03:37 PAGE 8   
 
    PDATA SIZE       =   ----    ----
    DATA SIZE        =   ----    ----

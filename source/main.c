@@ -264,7 +264,7 @@ void temperature_handle ( void )
 					if ( temp > 50 )
 					{
 						Heat_start_std = 2;
-						Open_Heat_Value = corrected_value_GAP_9_temp	;
+						Open_Heat_Value = corrected_value_GAP_6_temp	;
 					}
 					else
 					{
