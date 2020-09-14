@@ -1,4 +1,4 @@
-C51 COMPILER V9.56.0.0   ADC                                                               09/04/2020 15:42:22 PAGE 1   
+C51 COMPILER V9.56.0.0   ADC                                                               09/10/2020 14:09:50 PAGE 1   
 
 
 C51 COMPILER V9.56.0.0, COMPILATION OF MODULE ADC
@@ -62,7 +62,7 @@ line level    source
   50   1      }
   51          
   52          
-C51 COMPILER V9.56.0.0   ADC                                                               09/04/2020 15:42:22 PAGE 2   
+C51 COMPILER V9.56.0.0   ADC                                                               09/10/2020 14:09:50 PAGE 2   
 
   53          
   54          void get_voltage(u16 *u1_voltage,u16 *u3_voltage)
@@ -126,7 +126,7 @@ MODULE INFORMATION:   STATIC OVERLAYABLE
    DATA SIZE        =   ----    ----
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
-C51 COMPILER V9.56.0.0   ADC                                                               09/04/2020 15:42:22 PAGE 3   
+C51 COMPILER V9.56.0.0   ADC                                                               09/10/2020 14:09:50 PAGE 3   
 
 END OF MODULE INFORMATION.
 
