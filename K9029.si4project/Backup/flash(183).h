@@ -2,7 +2,7 @@
 #define __FLASH_H__
 #include "HC89F303.h"
 
-#define FLASH_CHECK_ADDRESS   0X3C00 //Áî®flashÊú´Â∞æ1K(ÊÄª16K)Âú∞ÂùÄ‰Ωú‰∏∫Â≠òÂÇ®Âü∫Âú∞ÂùÄ 1024*14 = 0X3800   
+#define FLASH_CHECK_ADDRESS   0X3C00 //”√flashƒ©Œ≤1K(◊‹16K)µÿ÷∑◊˜Œ™¥Ê¥¢ª˘µÿ÷∑ 1024*14 = 0X3800   
 #define FLASH_DATA_ADDRESS	FLASH_CHECK_ADDRESS + 4
 
 #define Correct_Value  2
@@ -34,31 +34,29 @@ typedef enum GAP_TYPE
 typedef enum GAP_TEMP
 {
 	GAP_WARM_temp	= 30,
-	GAP_1_temp 	= 45,
-	GAP_2_temp	= 49,
-	GAP_3_temp	= 52,
-	GAP_4_temp	= 55,
+	GAP_1_temp 	= 43,
+	GAP_2_temp	= 47,
+	GAP_3_temp	= 50,
+	GAP_4_temp	= 54,
 	GAP_5_temp	= 60,
 	GAP_6_temp	= 65,
 	GAP_7_temp	= 70,
-	GAP_8_temp	= 74,
-	GAP_9_temp	= 77,
-	One_Heat_Temp = 80,
-
+	GAP_8_temp	= 70,
+	GAP_9_temp	= 75,
+	One_Heat_Temp = 77,
 };
 	typedef enum corrected_value
 	{
 		corrected_value_warm_temp	= 1,
 		corrected_value_GAP_1_temp	= 1,
-		corrected_value_GAP_2_temp	= 1,
-		corrected_value_GAP_3_temp	= 1,
-		corrected_value_GAP_4_temp	= 2,
-		
-		corrected_value_GAP_5_temp	= 2,
-		corrected_value_GAP_6_temp	= 2,
-		corrected_value_GAP_7_temp	= 2,
-		corrected_value_GAP_8_temp	= 2,
-		corrected_value_GAP_9_temp	= 2,
+		corrected_value_GAP_2_temp	= 3,
+		corrected_value_GAP_3_temp	= 3,
+		corrected_value_GAP_4_temp	= 5,
+		corrected_value_GAP_5_temp	= 5,
+		corrected_value_GAP_6_temp	= 8,
+		corrected_value_GAP_7_temp	= 12,
+		corrected_value_GAP_8_temp	= 12,
+		corrected_value_GAP_9_temp	= 12,
 	
 	};
 
@@ -66,15 +64,15 @@ typedef enum GAP_TEMP
 		{
 			
 			corrected_time_warm_temp	= 30*1,
-			corrected_time_GAP_1_temp	= 60*2,
-			corrected_time_GAP_2_temp	= 60*2,
-			corrected_time_GAP_3_temp	= 30*5,
-			corrected_time_GAP_4_temp	= 60*4,
-			corrected_time_GAP_5_temp	= 60*5,
-			corrected_time_GAP_6_temp	= 60*8,
-			corrected_time_GAP_7_temp	= 60*10,
-			corrected_time_GAP_8_temp	= 60*10,
-			corrected_time_GAP_9_temp	= 60*13,
+			corrected_time_GAP_1_temp	= 30*2,
+			corrected_time_GAP_2_temp	= 30*2,
+			corrected_time_GAP_3_temp	= 30*2,
+			corrected_time_GAP_4_temp	= 30*3,
+			corrected_time_GAP_5_temp	= 30*4,
+			corrected_time_GAP_6_temp	= 30*5,
+			corrected_time_GAP_7_temp	= 60*3,
+			corrected_time_GAP_8_temp	= 60*4,
+			corrected_time_GAP_9_temp	= 60*4,
 		
 		};
 
@@ -105,3 +103,4 @@ void set_device_state ( u8 state );
 
 
 #endif
+
